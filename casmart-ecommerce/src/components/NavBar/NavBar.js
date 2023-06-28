@@ -1,6 +1,7 @@
 import './NavBar.css';
 import logo from './logo-casmart.svg';
 import CartWidget from './CartWidget/CartWidget';
+import LikeWidget from './LikeWidget/LikeWidget';
 import HeaderActionIcons from './HeaderActionIcons/HeaderActionIcons';
 
 function NavBar() {
@@ -21,11 +22,12 @@ function NavBar() {
                     <HeaderActionIcons name="person-outline" title="Sign in"/>
                     <HeaderActionIcons name="search-outline" title="Search"/>
                     <CartWidget/>
-                    <button className="header-action-btn">
+                    {/* <button className="header-action-btn">
                         <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
                         <p className="header-action-label">Wishlist</p>
                         <div className="btn-badge" aria-hidden="true">2</div>
-                    </button>
+                    </button> */}
+                    <LikeWidget/>
                 </div>
                 <button className="nav-open-btn" data-nav-open-btn aria-label="Open menu">
                     <span></span>
