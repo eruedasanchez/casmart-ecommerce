@@ -1,6 +1,7 @@
 import './NavBar.css';
 import logo from './logo-casmart.svg';
 import CartWidget from './CartWidget/CartWidget';
+import HeaderActionIcons from './HeaderActionIcons/HeaderActionIcons';
 
 function NavBar() {
     return (
@@ -17,22 +18,9 @@ function NavBar() {
                     <img src={logo} alt="Casmart logo" width="130" height="31"/>
                 </a>
                 <div className="header-actions">
-                    <button className="header-action-btn">
-                        <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-                        <p className="header-action-label">Sign in</p>
-                    </button>
-                    <button className="header-action-btn">
-                        <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
-                        <p className="header-action-label">Search</p>
-                    </button>
+                    <HeaderActionIcons name="person-outline" title="Sign in"/>
+                    <HeaderActionIcons name="search-outline" title="Search"/>
                     <CartWidget/>
-                    {/* Inicio componente Cart */}
-                    {/* <button className="header-action-btn">
-                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                        <p className="header-action-label">Cart</p>
-                        <div className="btn-badge green" aria-hidden="true">3</div>
-                    </button> */}
-                    {/* Fin componente Cart */}
                     <button className="header-action-btn">
                         <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
                         <p className="header-action-label">Wishlist</p>
