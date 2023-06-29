@@ -42,3 +42,80 @@
 .container{
   padding-inline: 15px;
 }
+
+a, button{
+  transition: 0.25s ease;;
+}
+
+h3 > a{
+  color: inherit;
+}
+
+.h1, .h2, .h3, .h4{
+  color: hsl(0, 0%, 9%);
+  font-weight: 600;
+}
+
+.h1{
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.h2{
+  font-size: 1.75rem;
+}
+
+.h3{
+  font-size: 1.25rem;
+}
+
+.h4{
+  font-size: 1.125rem;
+  font-weight: 500;
+
+}
+.btn{
+  background: hsl(0, 0%, 9%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  height: 60px;
+  padding-inline: 50px;
+  border: 1px solid hsl(0, 0%, 9%);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-primary:is(:hover, :focus){
+  background: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 9%);
+  border: 1px solid hsl(0, 0%, 9%);
+}
+
+.btn-secondary{
+  height: 50px;
+  background: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 9%);
+  border: 1px solid hsl(0, 0%, 100%);
+}
+
+.btn-secondary:is(:hover, :focus){
+  background: hsl(0, 0%, 9%);
+  color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(0, 0%, 9%);
+}
+
+.btn-outline{
+  height: 50px;
+  background: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 9%);
+  border: 1px solid hsl(0, 0%, 9%);
+  padding-inline: 40px;
+}
+
+.btn-outline:is(:hover, :focus){
+  background: hsl(0, 0%, 9%);
+  color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(0, 0%, 9%);
+}

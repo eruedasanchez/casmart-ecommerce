@@ -1,7 +1,7 @@
 import {useState} from "react";
 import './LikeWidget.css';
 
-function LikeWidget() {
+const LikeWidget = () => {
     const [counterLikes, setCounterLikes] = useState(10);
 
     return (
