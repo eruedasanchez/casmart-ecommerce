@@ -1,0 +1,78 @@
+.product-card .card-banner{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.product-card .card-badge{
+    background-color: hsl(0, 0%, 9%);
+    color: hsl(0, 0%, 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: hsl(0, 0%, 100%);
+    font-weight: 500;
+    padding: 3px 10px;
+}
+
+.product-card .card-badge.red{
+    background: hsl(356, 65%, 63%);
+}
+
+.product-card .card-badge.green{
+    background: hsl(131, 85%, 23%);
+} 
+
+.product-card .card-actions{
+    display: flex;
+    height: 45px;
+}
+
+.product-card .card-action-btn{
+    border: 1px solid hsl(0, 0%, 96%); 
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 9%);
+}
+
+.product-card .card-action-btn:is(:hover, :focus){
+    border-color: hsl(176, 35%, 63%);     
+    color: hsl(176, 35%, 63%);
+}
+
+.product-card .cart-btn{
+    flex-grow: 1; 
+    background-color: hsl(0, 0%, 9%);   
+    color: hsl(0, 0%, 100%);
+    border-color: hsl(0, 0%, 9%);
+}
+
+.product-card .cart-btn:is(:hover, :focus){
+    background: hsl(176, 35%, 63%);  
+    border-color: hsl(176, 35%, 63%);
+    color: hsl(0, 0%, 100%);  
+}
+
+.product-card .card-action-btn ion-icon{
+    font-size: 20px;
+}
+
+.product-card .card-title{
+    margin-bottom: 5px;
+}
+
+.product-card .card-price{
+    color: hsl(0, 0%, 9%);
+    font-size: 0.938rem;
+    font-weight: 600;
+}
+
+.product-card .card-price data:not(:first-child){
+    color: hsl(0, 0%, 44%);
+    margin-left: 5px;
+    text-decoration: line-through;
+}
+

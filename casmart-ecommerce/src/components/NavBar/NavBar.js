@@ -10,7 +10,7 @@ function NavBar() {
             <div className="container">
                 <div className="overlay" data-overlay></div> 
                 <div className="header-search">
-                    <input type="search" name="search" placeholder="Buscar producto..." class="input-field"/>
+                    <input type="search" name="search" placeholder="Buscar producto..." className="input-field"/>
                     <button className="search-btn" aria-label="Search">
                         <ion-icon name="search-outline"></ion-icon>
                     </button>
@@ -30,8 +30,8 @@ function NavBar() {
                     <span></span>
                 </button>
                 <nav className="navbar" data-navbar>
-                    <div class="navbar-top">
-                        <a href="#" class="logo">
+                    <div className="navbar-top">
+                        <a href="./index.html" className="logo">
                             <img src={logo} alt="Casmart logo" width="130" height="31"/>
                         </a>
                         <button className="nav-close-btn" data-nav-close-btn aria-label="Close menu">
@@ -39,10 +39,10 @@ function NavBar() {
                         </button>
                     </div>
                     <ul className="navbar-list">
-                        <li><a href="#home" className="navbar-link">Mas vendido</a></li>
-                        <li><a href="#home" className="navbar-link">Moda</a></li>
-                        <li><a href="#home" className="navbar-link">Tendencia</a></li>
-                        <li><a href="#home" className="navbar-link">Nueva coleccion</a></li>
+                        <li><a href="#home" className="navbar-link">Best Seller</a></li>
+                        <li><a href="#home" className="navbar-link">Hot Collection</a></li>
+                        <li><a href="#home" className="navbar-link">Trendy</a></li>
+                        <li><a href="#home" className="navbar-link">New Arrival</a></li>
                     </ul>
                 </nav>
             </div>

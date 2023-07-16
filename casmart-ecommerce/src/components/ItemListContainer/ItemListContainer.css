@@ -7,6 +7,7 @@
     padding-block: 60px;
     display: flex;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .hero .container{
@@ -24,3 +25,29 @@
     margin-bottom: 35px;
     max-width: 12ch;
 }
+
+/* product section */
+
+.filter-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 20px;
+    margin-bottom: 50px;
+}
+
+.filter-btn{
+    color: inherit;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.filter-btn.active{
+    color: hsl(176, 35%, 63%);
+}
+
+.product .btn{
+    margin-inline: auto;
+}
+
