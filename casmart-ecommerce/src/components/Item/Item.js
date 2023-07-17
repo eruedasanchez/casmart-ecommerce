@@ -1,5 +1,5 @@
 import './Item.css';
-import {Link, NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const Item = ({name, img, price}) => {
     return(
@@ -7,7 +7,7 @@ const Item = ({name, img, price}) => {
             <div className="product-card">
                 <figure className="card-banner">
                     <Link to='/item/:name'>
-                        <img src={img} alt={name} loading="lazy" style={{"width" : "800", "height" : "1034"}} className="w-100"/>
+                        <img src={img} alt={name} loading="lazy" style={{"width": "800", "height": "1034"}} className="w-100"/>
                     </Link>
                     <div className="card-actions">
                         <Link to='/item/:name' className="card-action-btn">

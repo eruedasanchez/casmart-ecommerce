@@ -1,6 +1,5 @@
 import { useParams } from 'react-router-dom';
 import './ItemDetailContainer.css';
-import NavBar from '../NavBar/NavBar';
 
 const ItemDetailContainer = () => {
     const {name} = useParams();
@@ -51,7 +50,7 @@ const ItemDetailContainer = () => {
                         </div>
                         <div className="details__action">
                             <input type="number" className="quantity"/>
-                            <a href="#" className="btn btn-primary btn--sm">Add to Cart</a>
+                            <a href="#" className="btn--add btn--sm">Add to Cart</a>
                             <a href="#" className="details__action-btn"><ion-icon name="heart-outline"></ion-icon></a>
                         </div>
                         <ul className="details__meta">

@@ -1,7 +1,7 @@
 import background from './hero-banner.jpg';
 import './ItemListContainer.css';
-import { useParams } from 'react-router-dom';
-import {Link } from 'react-router-dom';
+import {useParams} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import ItemList from '../ItemList/ItemList';
 
 const ItemListContainer = (greeting) => {
