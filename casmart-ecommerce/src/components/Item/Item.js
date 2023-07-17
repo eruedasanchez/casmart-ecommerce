@@ -1,15 +1,18 @@
 import './Item.css';
+import {Link, NavLink} from 'react-router-dom';
 
 const Item = ({name, img, price}) => {
     return(
         <li>
             <div className="product-card">
                 <figure className="card-banner">
-                    <a href="#"><img src={img} alt={name} loading="lazy" style={{"width" : "800", "height" : "1034"}} className="w-100"/></a>
+                    <Link to='/item/:name'>
+                        <img src={img} alt={name} loading="lazy" style={{"width" : "800", "height" : "1034"}} className="w-100"/>
+                    </Link>
                     <div className="card-actions">
-                        <button className="card-action-btn" aria-label="Quick view">
+                        <Link to='/item/:name' className="card-action-btn">
                             <ion-icon name="eye-outline"></ion-icon>
-                        </button>
+                        </Link>
                         <button className="card-action-btn cart-btn">
                             <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
                             <p>Add to cart</p>
