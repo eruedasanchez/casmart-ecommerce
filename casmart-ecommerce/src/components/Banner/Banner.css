@@ -1,0 +1,27 @@
+.hero{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    width: 100%;
+    min-height: 80vh;
+    padding-block: 60px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.hero .container{
+    width: 100%;
+}
+
+.hero-subtitle{
+    color: hsl(0, 0%, 9%);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero-title{
+    margin-bottom: 35px;
+    max-width: 12ch;
+}

@@ -17,7 +17,7 @@ function NavBar() {
                     </button>
                 </div>
                 <Link to='/' className="logo">
-                    <img src={logo} alt="Casmart logo" width="130" height="31"/>
+                    <img src={logo} alt="Casmart logo" style={{width:"130", height:"31"}}/>
                 </Link>
                 <div className="header-actions">
                     <HeaderActionIcons name="person-outline" title="Sign in"/>
@@ -33,7 +33,7 @@ function NavBar() {
                 <nav className="navbar" data-navbar>
                     <div className="navbar-top">
                         <Link to='/' className="logo">
-                            <img src={logo} alt="Casmart logo" width="130" height="31"/>
+                            <img src={logo} alt="Casmart logo" style={{width:"130", height:"31"}}/>
                         </Link>
                         <button className="nav-close-btn" data-nav-close-btn aria-label="Close menu">
                             <ion-icon name="close-outline"></ion-icon>
