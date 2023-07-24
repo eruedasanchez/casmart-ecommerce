@@ -1,0 +1,80 @@
+.details__action{
+    display: flex;
+    column-gap: 0.375rem;
+    margin-bottom: 3.25rem;
+}
+
+.quantity, .details__action-btn{
+    border: 1px solid hsl(113, 15%, 90%);
+    font-size: 0.875rem;
+} 
+
+.quantity{
+    max-width: 80px;
+    padding-block: 0.5rem;
+    padding-inline: 1rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.details__action-btn{
+    color: hsl(0, 0%, 0%);  
+    font-size: 18px;
+    padding-top: 0.6rem;
+    line-height: 50px;
+    padding-inline: 0.75rem;
+}
+
+.input__count{
+    width: 30%;
+    height: 41px;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.input__count-minus {
+    background-color: hsl(0, 0%, 0%);
+    width: 36px;
+    height: 100%;
+    padding: 17px 9px; 
+    border: 1px solid hsl(113, 15%, 90%);
+}
+
+.input__count-number {
+    width: 100%;
+    border: 1px solid hsl(113, 15%, 90%);
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 0%);
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 5px;
+    outline: none; 
+}
+.input__count-plus {
+    background-color: hsl(0, 0%, 0%);
+    width: 36px;
+    height: 100%;
+    padding: 11px 9px;  
+    border: 1px solid hsl(113, 15%, 90%);
+}
+
+@media(max-width: 1200px){
+    
+    .details__action{
+        margin-bottom: 2.75rem;
+    }
+}
+
+@media(max-width:992px){
+    
+    .btn--add{
+        height: 45px;
+        line-height: 45px;
+    }
+    
+    .btn--sm{
+        height: 38px;
+        line-height: 35px;
+    }
+}
+

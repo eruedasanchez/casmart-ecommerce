@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
 import Home from './components/Home/Home';
@@ -6,11 +7,13 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Error from './components/Error/Error';
 import './Media.css';
-
+import { CartContext } from './context/cartContext';
 
 function App() {
+  const [cart, setCart] = useState([]);
   return (
     <>
+    <CartContext.Provider value={{cart, setCart}}>
       <BrowserRouter>
         <NavBar/>
         <Routes>
@@ -22,6 +25,7 @@ function App() {
           <Route path='*' element={<Error/>}/>
         </Routes>
       </BrowserRouter>
+    </CartContext.Provider>
     </>
   );
 }

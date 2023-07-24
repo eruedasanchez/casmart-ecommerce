@@ -1,6 +1,39 @@
+import { useContext, useState } from 'react';
+import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
+import { CartContext } from '../../context/cartContext';
 
 const ItemDetail = ({item}) => {
+    const {cart, setCart} = useContext(CartContext);
+    console.log(cart);
+
+    const [count, setCount] = useState(1);
+
+    const handleDecrement = () => {
+        count > 1 && setCount(count - 1);
+    }
+
+    const handleIncrement = () => {
+        count < item.stock && setCount(count + 1);  
+    }
+
+    const handleAddToCart = () => {
+        const itemAdded = {...item, count};
+        
+        const newCart = [...cart];
+        const wasAddedProduct = newCart.find((prod) => prod.id === itemAdded.id);
+        
+        if(wasAddedProduct){
+            wasAddedProduct.count += count;
+            setCart(newCart)
+        } else {
+            setCart([...cart, itemAdded]);
+        }
+    }
+
+
+
+
     return (
         <section className="details section--lg">
             <div className="details__container container--detail grid">
@@ -45,11 +78,7 @@ const ItemDetail = ({item}) => {
                                 <li><a href="#" className="size__link">XL</a></li>
                             </ul>
                         </div>
-                        <div className="details__action">
-                            <input type="number" className="quantity"/>
-                            <a href="#" className="btn--add btn--sm">Add to Cart</a>
-                            <a href="#" className="details__action-btn"><ion-icon name="heart-outline"></ion-icon></a>
-                        </div>
+                        <ItemCount count={count} handleDecrement={handleDecrement} handleIncrement={handleIncrement} handleAddToCart={handleAddToCart}/>
                         <ul className="details__meta">
                             <li className="meta__list flex"><span>ID:</span> FWM15VKT</li>
                             <li className="meta__list flex"><span>Tags:</span> Cloth, Women, Sweater</li>
