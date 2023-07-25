@@ -1,0 +1,214 @@
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+
+/*=============== REUSED STYLE ===============*/
+
+.container--cart{
+    max-width: 1320px;
+    margin-inline: auto;
+    padding-inline: 0.75rem;
+}
+
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section--lg{
+    padding-block: 4rem;
+}
+
+.section__title{
+    font-size: 1.375rem;;
+    margin-bottom: 1.5rem;
+}
+
+.form__input{
+    border: 1px solid hsl(113, 15%, 90%);
+    padding-inline: 1rem;
+    height: 45px;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+}
+
+.form{
+    row-gap: 1rem;
+}
+
+.form__group{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+/*=============== CART ===============*/
+
+.table__container{
+    overflow-x: auto;
+}
+
+.table{
+    table-layout: auto;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.table thead tr{
+    border-top: 1px solid hsl(113, 15%, 90%);
+}
+
+.table thead tr:last-child{
+    border-bottom: 1px solid hsl(113, 15%, 90%);
+}
+
+.table thead tr th:nth-child(1), .table tbody tr td:nth-child(1){
+    width: 216px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table thead tr th:nth-child(2), .table tbody tr td:nth-child(2){
+    width: 400px;
+}
+
+.table thead tr th:nth-child(3), .table tbody tr td:nth-child(3){
+    width: 108px;
+}
+
+.table thead tr th:nth-child(4), .table tbody tr td:nth-child(4){
+    width: 220px;
+}
+
+.table thead tr th:nth-child(5), .table tbody tr td:nth-child(5){
+    width: 200px;
+}
+
+.table thead tr th:nth-child(6){
+    width: 152px;
+}
+
+.table tbody tr td:nth-child(6){
+    width: 152px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table__img{
+    width: 70px;
+}
+
+.table thead tr th, .table tbody tr td{
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.table__title, .table__price, .table__subtotal, .table tbody tr td ion-icon, .table__stock{
+    font-size: 1rem;
+}
+
+.quantity__cart {
+    font-size: 1rem;
+    text-align: center;
+} 
+
+.table__title, .table__stock{
+    color: hsl(176, 35%, 63%);
+}
+
+.table tbody tr td ion-icon{
+    color: hsl(60, 1%, 56%);
+    text-align: center;
+    padding-bottom: 41px;
+}
+
+.cart__actions{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.divider{
+    position: relative;
+    margin-block: 2rem; 
+    margin-bottom: 5rem;
+}
+
+.divider::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid hsl(113, 15%, 90%);
+}
+
+.cart__group{
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+}
+
+.btn--sm{
+    height: 38px;
+    line-height: 35px;
+}
+
+.btn--md{
+    height: 45px;
+    line-height: 42px;
+}
+
+.cart__shipping .section__title, .cart__coupon .section__title, .cart__total .section__title{
+    font-size: 1.125rem;;
+    margin-bottom: 1rem;
+} 
+
+.cart__coupon{
+    margin-top: 3rem;
+}
+
+.coupon__form .form__group{
+    align-items: center;
+}
+
+.cart__total{
+    border: 1px solid hsl(113, 15%, 90%);
+    border-radius: 0.25rem;
+    padding: 1.75rem;
+}
+
+.cart__total-table{
+    margin-bottom: 1rem;
+}
+
+.cart__total-table thead tr td, .cart__total-table tbody tr td{
+    border: 1px solid hsl(113, 15%, 90%);
+    padding: 0.75rem 0.5rem;
+    width: 50%;
+}
+
+.cart__total-title{
+    font-size: 0.875rem;;
+}
+
+.cart__total-price{
+    color: hsl(0, 0%, 9%);
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.cart__total .btn{
+    display: inline-flex;
+}
