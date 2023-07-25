@@ -2,6 +2,7 @@ import './Home.css';
 import {Link} from 'react-router-dom';
 import Banner from '../Banner/Banner';
 import ItemListContainer from '../ItemListContainer/ItemListContainer';
+import Newsletter from '../Newsletter/Newsletter';
 
 export const Home = () => {
     return(
@@ -19,6 +20,7 @@ export const Home = () => {
                     <ItemListContainer/>
                 </div>
         </section>
+        <Newsletter/>
         </>
     )
 }
