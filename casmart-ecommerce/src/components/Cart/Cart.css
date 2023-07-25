@@ -1,11 +1,9 @@
+/*=============== REUSED STYLE ===============*/
+
 table{
     width: 100%;
     border-collapse: collapse;
 }
-
-
-
-/*=============== REUSED STYLE ===============*/
 
 .container--cart{
     max-width: 1320px;
@@ -56,11 +54,11 @@ table{
     margin-bottom: 2rem;
 }
 
-.table thead tr{
+.table thead tr, .table tbody tr{
     border-top: 1px solid hsl(113, 15%, 90%);
 }
 
-.table thead tr:last-child{
+.table thead tr:last-child, .table tbody tr:last-child{
     border-bottom: 1px solid hsl(113, 15%, 90%);
 }
 
@@ -117,7 +115,8 @@ table{
 } 
 
 .table__title, .table__stock{
-    color: hsl(176, 35%, 63%);
+    color: hsl(0, 0%, 44%);
+    font-weight: 600;
 }
 
 .table tbody tr td ion-icon{
