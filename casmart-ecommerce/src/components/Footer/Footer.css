@@ -1,0 +1,129 @@
+/* footer */
+
+.footer{
+    padding: 55px 0;
+}
+
+.footer-top{
+    background: hsl(0, 0%, 96%);
+    padding-block: 60px; 
+}
+
+.footer-top .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer .logo{
+    margin-bottom: 20px;
+}
+
+.footer-text{
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.social-list{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-link{
+    color: hsl(0, 0%, 9%);
+    font-size: 18px;
+    width: 35px;
+    height: 35px;
+    border: 1px solid hsl(0, 0%, 44%);
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+}
+
+.social-link:is(:hover, :focus){
+    background: hsl(0, 0%, 9%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+}
+
+.footer-list{
+    width: 100%;
+}
+
+.footer-list-title{
+    color: hsl(0, 0%, 9%);
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.footer-link{
+    position: relative;
+    color: inherit;
+    padding-block: 5px;
+}
+
+.footer-link:is(:hover, :focus){
+    color: hsl(0, 0%, 9%);
+    transform: translateX(15px);
+}
+
+.footer-link::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%) scale(var(--scale, 0));
+    transform-origin: right;
+    background-color: hsl(0, 0%, 44%);
+    width: 10px;
+    height: 2px;
+    transition: 0.25s ease;
+}
+
+.footer-link:is(:hover, :focus)::before{
+    --scale: 1;
+}
+
+.footer-bottom{
+    padding-block: 20px;
+}
+
+.footer-bottom a{
+    color: inherit;
+}
+
+.copyright{
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.copyright a{
+    display: inline-block;
+    color: hsl(0, 0%, 9%);
+    font-weight: 600;
+}
+
+.footer-bottom-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px 15px;
+    margin-bottom: 15px;
+}
+
+.footer-bottom-list:is(:hover, :focus){
+    color: hsl(0, 0%, 9%);
+}
+
+.payment{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}

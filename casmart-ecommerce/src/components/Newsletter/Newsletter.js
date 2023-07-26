@@ -2,8 +2,8 @@ import "./Newsletter.css";
 
 const Newsletter = () => {
     return (
-        <section className="section-news newsletter">
-            <div className="container__newsletter">
+        <section className="section newsletter">
+            <div className="container">
                 <div className="newsletter-card">
                     <h2 className="card-title">Subscribe Newsletter</h2>
                     <p className="card-text">Enter your email below to be the first to know about new collections and product launches.</p>

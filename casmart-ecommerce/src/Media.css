@@ -12,6 +12,19 @@
         width: calc(50% - 12.5px);
     }
 
+    /* footer */
+
+    .footer-brand{
+        width: 100%;
+    }
+
+    .footer-text{
+        max-width: 470px;
+    }
+
+    .footer-list{
+        width: calc(50% -20px);
+    }
 }
 
 
@@ -42,6 +55,49 @@
     .hero{
         background-position: center;
         min-height: 800px;
+    }
+
+    /* newsletter section */
+
+    .newsletter-card{
+        max-width: 480px;
+        margin-inline: auto;
+    }
+
+    .newsletter-card .card-form{
+        position: relative;
+    }
+
+    .newsletter-card .input-wrapper{
+        margin-bottom: 0;
+    }
+
+    .newsletter-card .btn{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: max-content;
+        padding-inline: 35px;
+        border-radius: 0 6px 6px 0;
+    }
+
+    /* footer */
+
+    .footer-list{
+        width: calc(33.33% - 26.66px);
+    }
+
+    .copyright, .footer-bottom-list{
+        margin-bottom: 0;
+    }
+
+    .footer-bottom .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 25px 25px;
     }
 }
 
@@ -196,6 +252,12 @@
     .product-card .card-action-btn:last-child{
         border-radius: 0 6px 6px 0;
     }
+
+    /* Newsletter section */
+
+    .newsletter-card .card-form{
+        max-width: 650px;
+    }
 }
 
 /* Responsive for larger than 1200px screen */
@@ -218,5 +280,23 @@
 
     .product-list > li{
         width: calc(25% - 18.75px);
+    }
+
+    /* footer */
+
+    .footer-brand{
+        width: calc(40% - 30px);
+    }
+
+    .footer-text{
+        max-width: 340px;
+    }
+
+    .footer-list{
+        width: calc(20% - 30px);
+    }
+
+    .footer-bottom .container{
+        justify-content: space-between;
     }
 }

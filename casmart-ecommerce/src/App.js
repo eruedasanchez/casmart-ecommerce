@@ -7,6 +7,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Error from './components/Error/Error';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
+import Footer from './components/Footer/Footer';
 import './Media.css';
 import {CartProvider} from './context/cartContext';
 
@@ -26,6 +27,7 @@ function App() {
           <Route path='/checkout' element={<Checkout/>}/>
           <Route path='*' element={<Error/>}/>
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </CartProvider>
   );
