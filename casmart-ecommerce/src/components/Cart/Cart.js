@@ -49,16 +49,6 @@ const Cart = () => {
                     <button className="btn btn-primary flex btn--md"><ion-icon name="bag-handle-outline"></ion-icon>Continue Shopping</button>
                 </Link>
             </div>
-            </> :
-            <>
-            <h3 className="section__title">The cart is empty!</h3>
-            <div className="cart__actions">
-                <Link to='/category/'>
-                    <button className="btn btn-primary flex btn--md"><ion-icon name="bag-handle-outline"></ion-icon>Continue Shopping</button>
-                </Link>
-            </div>
-            </>
-            }
             <div className="divider"></div>
             <div className="cart__group grid">
                 <div>
@@ -110,6 +100,16 @@ const Cart = () => {
                         </Link>
                 </div>
             </div>
+            </> :
+            <>
+            <h3 className="section__title">The cart is empty!</h3>
+            <div className="cart__actions">
+                <Link to='/category/'>
+                    <button className="btn btn-primary flex btn--md"><ion-icon name="bag-handle-outline"></ion-icon>Continue Shopping</button>
+                </Link>
+            </div>
+            </>
+            }
         </section>
     )
 }

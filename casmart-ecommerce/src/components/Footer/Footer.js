@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Footer.css";
 import logo from './logo-casmart.svg';
 
@@ -7,55 +8,53 @@ const Footer = () => {
             <div className="footer-top">
                 <div className="container">
                     <div className="footer-brand">
-                        <a href="#" class="logo"><img src={logo} alt="Casmart logo"/></a>
+                        <Link to={'/'} className="logo"><img src={logo} alt="Casmart logo"/></Link>
                         <p className="footer-text">Casmart is a fashion theme for presents a complete wardrobe of uniquely crafted Ethnic Wear, Casuals, Edgy Denims, & Accessories inspired from the most contemporary</p>
                         <ul className="social-list">
-                            <li><a href="#" className="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                            <li><a href="#" className="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
-                            <li><a href="#" className="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                            <li><a href="#" className="social-link"><ion-icon name="logo-pinterest"></ion-icon></a></li>
+                            <li><Link to={'/'} className="social-link"><ion-icon name="logo-facebook"></ion-icon></Link></li>
+                            <li><Link to={'/'} className="social-link"><ion-icon name="logo-twitter"></ion-icon></Link></li>
+                            <li><Link to={'/'} className="social-link"><ion-icon name="logo-instagram"></ion-icon></Link></li>
+                            <li><Link to={'/'} className="social-link"><ion-icon name="logo-pinterest"></ion-icon></Link></li>
                         </ul>
                     </div>
                     <ul className="footer-list">
-                        <li><p class="footer-list-title">Information</p></li>
-                        <li><a href="#" className="footer-link">About Company</a></li>
-                        <li><a href="#" className="footer-link">Payment Type</a></li>
-                        <li><a href="#" className="footer-link">Awards Winning</a></li>
-                        <li><a href="#" className="footer-link">World Media Partner</a></li>
-                        <li><a href="#" className="footer-link">Become an Agent</a></li>
-                        <li><a href="#" className="footer-link">Refund Policy</a></li>
+                        <li><p className="footer-list-title">Information</p></li>
+                        <li><Link to={'/'} className="footer-link">About Company</Link></li>
+                        <li><Link to={'/'} className="footer-link">Payment Type</Link></li>
+                        <li><Link to={'/'} className="footer-link">Awards Winning</Link></li>
+                        <li><Link to={'/'} className="footer-link">World Media Partner</Link></li>
+                        <li><Link to={'/'} className="footer-link">Become an Agent</Link></li>
+                        <li><Link to={'/'} className="footer-link">Refund Policy</Link></li>
                     </ul>
                     <ul className="footer-list">
-                        <li><p class="footer-list-title">Category</p></li>
-                        <li><a href="#" className="footer-link">Handbags & Wallets</a></li>
-                        <li><a href="#" className="footer-link">Women's Clothing</a></li>
-                        <li><a href="#" className="footer-link">Plus Sizes</a></li>
-                        <li><a href="#" className="footer-link">Complete Your Look</a></li>
-                        <li><a href="#" className="footer-link">Baby Corner</a></li>
-                        <li><a href="#" className="footer-link">Man & Woman Shoe</a></li>
+                        <li><p className="footer-list-title">Category</p></li>
+                        <li><Link to='/category/best-seller' className="footer-link">Best Seller</Link></li>
+                        <li><Link to='/category/hot-collection' className="footer-link">Hot Collection</Link></li>
+                        <li><Link to='/category/trendy' className="footer-link">Trendy</Link></li>
+                        <li><Link to='/category/new-arrival' className="footer-link">New Arrival</Link></li>
                     </ul>
                     <ul className="footer-list">
-                        <li><p class="footer-list-title">Help & Support</p></li>
-                        <li><a href="#" className="footer-link">Dealers & Agents</a></li>
-                        <li><a href="#" className="footer-link">FAQ Information</a></li>
-                        <li><a href="#" className="footer-link">Return Policy</a></li>
-                        <li><a href="#" className="footer-link">Shipping & Delivery</a></li>
-                        <li><a href="#" className="footer-link">Order Tranking</a></li>
-                        <li><a href="#" className="footer-link">List of Shops</a></li>
+                        <li><p className="footer-list-title">Help & Support</p></li>
+                        <li><Link to={'/'} className="footer-link">Dealers & Agents</Link></li>
+                        <li><Link to={'/'} className="footer-link">FAQ Information</Link></li>
+                        <li><Link to={'/'} className="footer-link">Return Policy</Link></li>
+                        <li><Link to={'/'} className="footer-link">Shipping & Delivery</Link></li>
+                        <li><Link to={'/'} className="footer-link">Order Tranking</Link></li>
+                        <li><Link to={'/'} className="footer-link">List of Shops</Link></li>
                     </ul>
                 </div>
             </div>
             <div className="footer-bottom">
                 <div className="container">
-                    <p className="copyright">&copy; 2023 <a href="#">e-ruedasanchez</a>. All Rights Reserved</p>
+                    <p className="copyright">&copy; 2023 <Link to={'/'}>e-ruedasanchez</Link>. All Rights Reserved</p>
                     <ul className="footer-bottom-list">
-                        <li><a href="#" clasNames="footer-bottom-link">Privacy Policy</a></li>
-                        <li><a href="#" className="footer-bottom-link">Terms & Conditions</a></li>
-                        <li><a href="#" className="footer-bottom-link">Sitemap</a></li>
+                        <li><Link to={'/'} className="footer-bottom-link">Privacy Policy</Link></li>
+                        <li><Link to={'/'} className="footer-bottom-link">Terms & Conditions</Link></li>
+                        <li><Link to={'/'} className="footer-bottom-link">Sitemap</Link></li>
                     </ul>
                     <div className="payment">
                         <p className="payment-title">We Support</p>
-                        <img src="https://i.postimg.cc/yNwkjxkZ/payment-img.png" alt="Online payment logos" class="payment-img"/>
+                        <img src="https://i.postimg.cc/yNwkjxkZ/payment-img.png" alt="Online payment logos" className="payment-img"/>
                     </div>
                 </div>
             </div>

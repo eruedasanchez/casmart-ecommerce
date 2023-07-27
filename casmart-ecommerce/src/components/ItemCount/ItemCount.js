@@ -1,10 +1,10 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import './ItemCount.css';
+import {Link} from 'react-router-dom';
 import minusIcon from './icon-minus.svg';
 import plusIcon from './icon-plus.svg';
 
 const ItemCount = ({count, handleDecrement, handleIncrement, handleAddToCart}) => {
-    
     return (
         <div className="details__action">
             <div className="input__count">
@@ -12,9 +12,8 @@ const ItemCount = ({count, handleDecrement, handleIncrement, handleAddToCart}) =
                 <p className="input__count-number">{count}</p>
                 <button onClick={handleIncrement}><img className="input__count-plus" src={plusIcon} alt="plus"/></button>
             </div>
-            {/* <input type="number" className="quantity"/> */}
             <button className="btn--add btn--sm" onClick={handleAddToCart}>Add to Cart</button>
-            <a href="#" className="details__action-btn"><ion-icon name="heart-outline"></ion-icon></a>
+            <Link className="details__action-btn"><ion-icon name="heart-outline"></ion-icon></Link>
         </div>
     )
 }

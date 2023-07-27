@@ -2,6 +2,11 @@ import './Item.css';
 import {Link} from 'react-router-dom';
 
 const Item = ({id, name, img, price}) => {
+
+    const handleAdd = () => {
+        console.log(id);
+    }
+    
     return(
         <li>
             <div className="product-card">
@@ -13,13 +18,15 @@ const Item = ({id, name, img, price}) => {
                         <Link to={`/item/${id}`} className="card-action-btn">
                             <ion-icon name="eye-outline"></ion-icon>
                         </Link>
-                        <button className="card-action-btn cart-btn">
+                        {/* <Link> */}
+                        <button onClick={handleAdd} className="card-action-btn cart-btn">
                             <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
                             <p>Add to cart</p>
                         </button>
-                        <button className="card-action-btn" aria-label="Add to Whishlist">
+                        {/* </Link> */}
+                        <Link to={`/item/${id}`} className="card-action-btn">
                             <ion-icon name="heart-outline"></ion-icon>
-                        </button>
+                        </Link>
                     </div>
                 </figure>
                 <div className="card-content">

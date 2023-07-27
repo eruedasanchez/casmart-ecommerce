@@ -4,12 +4,36 @@ import logo from './logo-casmart.svg';
 import CartWidget from '../CartWidget/CartWidget';
 import LikeWidget from '../LikeWidget/LikeWidget';
 import HeaderActionIcons from '../HeaderActionIcons/HeaderActionIcons';
+// import { useState } from 'react';
+// import { useEffect } from 'react';
 
 function NavBar() {
+
+    // const [headerActive, setHeaderActive] = useState(true);
+
+    // const handleHeaderActive = () => {
+    //     if(window.scrollY < 100){
+    //         setHeaderActive(false);
+    //     }
+    // }
+    
+    // useEffect(() => {
+    //     handleHeaderActive();
+    // }, [])
+    
+    // useEffect(() => {
+    //     window.addEventListener("scroll", () => {
+    //         window.scrollY >= 100 ? header.classNameList.add('active') : header.classNameList.remove('active');
+    //     })
+    // }, []);
+
+    
+    
     return (
-        <header className="header" data-header>  
+            <header className="header">  
+        {/* // <header onScroll={handleHeaderActive} className={headerActive ? "header active" : "header"}>  */}
             <div className="container">
-                <div className="overlay" data-overlay></div> 
+                <div className="overlay"></div> 
                 <div className="header-search">
                     <input type="search" name="search" placeholder="Search product..." className="input-field"/>
                     <button className="search-btn" aria-label="Search">
@@ -30,12 +54,12 @@ function NavBar() {
                     <span></span>
                     <span></span>
                 </button>
-                <nav className="navbar" data-navbar>
+                <nav className="navbar">
                     <div className="navbar-top">
                         <Link to='/' className="logo">
                             <img src={logo} alt="Casmart logo" style={{width:"130", height:"31"}}/>
                         </Link>
-                        <button className="nav-close-btn" data-nav-close-btn aria-label="Close menu">
+                        <button className="nav-close-btn" aria-label="Close menu">
                             <ion-icon name="close-outline"></ion-icon>
                         </button>
                     </div>

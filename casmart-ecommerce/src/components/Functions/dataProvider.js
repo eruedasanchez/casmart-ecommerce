@@ -4,7 +4,7 @@ export const dataProvider = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(data);            
-        }, 600)
+        }, 1000)
     })
 }
 

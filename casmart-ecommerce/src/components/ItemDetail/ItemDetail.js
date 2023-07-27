@@ -1,11 +1,13 @@
 import { useContext, useState } from 'react';
+import {Link} from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 import { CartContext } from '../../context/cartContext';
 
 const ItemDetail = ({item}) => {
-    const {cart, addToCart} = useContext(CartContext);
-    console.log(cart);
+    // const {cart, addToCart} = useContext(CartContext);
+    const {addToCart} = useContext(CartContext);
+    // console.log(cart);
 
     const [count, setCount] = useState(1);
 
@@ -45,25 +47,25 @@ const ItemDetail = ({item}) => {
                         <div className="details__color flex">
                             <span className="details__color-title">Color</span>
                             <ul className="color__list">
-                                <li><a href="#" className="color__link" style={{backgroundColor: "hsl(176, 35%, 63%)"}}></a></li>
-                                <li><a href="#" className="color__link" style={{backgroundColor: "hsl(356, 65%, 63%)"}}></a></li>
-                                <li><a href="#" className="color__link" style={{backgroundColor: "hsl(131, 85%, 23%)"}}></a></li>
-                                <li><a href="#" className="color__link" style={{backgroundColor: "hsl(0, 0%, 0%)"}}></a></li>
-                                <li><a href="#" className="color__link" style={{backgroundColor: "hsl(0, 0%, 44%)"}}></a></li>
+                                <li><Link href="#" className="color__link" style={{backgroundColor: "hsl(176, 35%, 63%)"}}></Link></li>
+                                <li><Link href="#" className="color__link" style={{backgroundColor: "hsl(356, 65%, 63%)"}}></Link></li>
+                                <li><Link href="#" className="color__link" style={{backgroundColor: "hsl(131, 85%, 23%)"}}></Link></li>
+                                <li><Link href="#" className="color__link" style={{backgroundColor: "hsl(0, 0%, 0%)"}}></Link></li>
+                                <li><Link href="#" className="color__link" style={{backgroundColor: "hsl(0, 0%, 44%)"}}></Link></li>
                             </ul>
                         </div>
                         <div className="details__size flex">
                             <span className="details__size-title">Size</span>
                             <ul className="size__list">
-                                <li><a href="#" className="size__link size-active">S</a></li>
-                                <li><a href="#" className="size__link">M</a></li>
-                                <li><a href="#" className="size__link">L</a></li>
-                                <li><a href="#" className="size__link">XL</a></li>
+                                <li><Link href="#" className="size__link size-active">S</Link></li>
+                                <li><Link href="#" className="size__link">M</Link></li>
+                                <li><Link href="#" className="size__link">L</Link></li>
+                                <li><Link href="#" className="size__link">XL</Link></li>
                             </ul>
                         </div>
                         <ItemCount count={count} handleDecrement={handleDecrement} handleIncrement={handleIncrement} handleAddToCart={() => {addToCart(item, count)}}/>
                         <ul className="details__meta">
-                            <li className="meta__list flex"><span>ID:</span> FWM15VKT</li>
+                            <li className="meta__list flex"><span>ID:</span> {item.id}</li>
                             <li className="meta__list flex"><span>Tags:</span> Cloth, Women, Sweater</li>
                             <li className="meta__list flex"><span>Availability:</span> {item.stock} Items In Stock</li>
                         </ul>
