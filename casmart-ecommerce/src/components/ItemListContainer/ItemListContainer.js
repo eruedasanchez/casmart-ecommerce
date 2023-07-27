@@ -3,6 +3,7 @@ import {useState, useEffect} from "react";
 import {Link, useParams} from "react-router-dom";
 import ItemList from '../ItemList/ItemList';
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
+import Spinner from "../Spinner/Spinner";
 
 export const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
@@ -25,7 +26,7 @@ export const ItemListContainer = () => {
         <section className="section product">
             <div className="container">
                 <ul className="product-list">
-                    {products.length > 0 ? <ItemList products={products}/> : <h1>Cargando lista...</h1> }
+                    {products.length > 0 ? <ItemList products={products}/> : <Spinner/>}
                 </ul>
                 <Link to='/category/'>
                     <button className="btn btn-outline">View All Products</button>

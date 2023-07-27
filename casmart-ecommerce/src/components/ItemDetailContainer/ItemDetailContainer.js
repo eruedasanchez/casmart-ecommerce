@@ -4,6 +4,7 @@ import {useParams} from 'react-router-dom';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import './ItemDetailContainer.css';
 import { doc, getDoc, getFirestore } from 'firebase/firestore';
+import Spinner from '../Spinner/Spinner';
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState(null);
@@ -19,9 +20,9 @@ const ItemDetailContainer = () => {
     }, [id])
     
     return (
-        <>
-        {item ? <ItemDetail item={item}/> : <h1>Cargando...</h1>}
-        </>
+        <div className='contaner-item'>
+        {item ? <ItemDetail item={item}/> : <Spinner/>}
+        </div>
     )
 }
 
