@@ -5,12 +5,8 @@ import './ItemDetail.css';
 import { CartContext } from '../../context/cartContext';
 
 const ItemDetail = ({item}) => {
-    // const {cart, addToCart} = useContext(CartContext);
-    const {addToCart} = useContext(CartContext);
-    // console.log(cart);
-
-    const [count, setCount] = useState(1);
-
+    const {addToCart, count, setCount} = useContext(CartContext);
+    
     const handleDecrement = () => {
         count > 1 && setCount(count - 1);
     }
@@ -63,7 +59,7 @@ const ItemDetail = ({item}) => {
                                 <li><Link href="#" className="size__link">XL</Link></li>
                             </ul>
                         </div>
-                        <ItemCount count={count} handleDecrement={handleDecrement} handleIncrement={handleIncrement} handleAddToCart={() => {addToCart(item, count)}}/>
+                        <ItemCount count={count} handleDecrement={handleDecrement} handleIncrement={handleIncrement} handleAddToCart={() => {addToCart(item, count)}}/>   
                         <ul className="details__meta">
                             <li className="meta__list flex"><span>ID:</span> {item.id}</li>
                             <li className="meta__list flex"><span>Tags:</span> Cloth, Women, Sweater</li>
