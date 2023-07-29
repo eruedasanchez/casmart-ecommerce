@@ -1,6 +1,5 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useContext} from 'react';
 import {useParams} from 'react-router-dom';
-// import {requestItemById} from '../Functions/dataProvider';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import './ItemDetailContainer.css';
 import { doc, getDoc, getFirestore } from 'firebase/firestore';
@@ -8,6 +7,7 @@ import Spinner from '../Spinner/Spinner';
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState(null);
+    
     const {id} = useParams();
     
     useEffect(() => {

@@ -37,10 +37,13 @@
     height: 100%;
     padding: 17px 9px; 
     border: 1px solid hsl(113, 15%, 90%);
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
 }
 
 .input__count-number {
     width: 100%;
+    height: 100%;
     border: 1px solid hsl(113, 15%, 90%);
     background-color: hsl(0, 0%, 100%);
     color: hsl(0, 0%, 0%);
@@ -48,7 +51,8 @@
     font-weight: 600;
     text-align: center;
     padding-top: 5px;
-    outline: none; 
+    outline: none;
+    
 }
 .input__count-plus {
     background-color: hsl(0, 0%, 0%);
@@ -56,6 +60,8 @@
     height: 100%;
     padding: 11px 9px;  
     border: 1px solid hsl(113, 15%, 90%);
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px; 
 }
 
 @media(max-width: 1200px){

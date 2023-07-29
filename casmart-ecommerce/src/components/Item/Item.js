@@ -3,9 +3,14 @@ import {Link} from 'react-router-dom';
 
 const Item = ({id, name, img, price}) => {
 
-    const handleAdd = () => {
-        console.log(id);
-    }
+    // La idea es agregar un producto desde el boton de add 
+
+    // const {item, setItem, addToCart} = useContext(CartContext);
+    // const {} = useContext(CartContext);
+
+    // const handleAddByCard = () => {
+    //     console.log(cart);
+    // }
     
     return(
         <li>
@@ -19,7 +24,7 @@ const Item = ({id, name, img, price}) => {
                             <ion-icon name="eye-outline"></ion-icon>
                         </Link>
                         {/* <Link> */}
-                        <button onClick={handleAdd} className="card-action-btn cart-btn">
+                        <button className="card-action-btn cart-btn">
                             <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
                             <p>Add to cart</p>
                         </button>

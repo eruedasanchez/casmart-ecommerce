@@ -4,12 +4,12 @@ import { useContext } from "react";
 import { CartContext } from "../../context/cartContext";
 
 const Cart = () => {
-    const {cart, subtotal, shipping, total, cleanCart} = useContext(CartContext);
+    const {cart, deleteItem, subtotal, shipping, total, cleanCart} = useContext(CartContext);
     
     const handleEmptyCart = () => {
         cleanCart(); 
     }
-
+    
     return (
         <section className="cart section--lg container--cart">
             {
@@ -36,7 +36,7 @@ const Cart = () => {
                                     <td><span className="table__price">${prod.price}</span></td>
                                     <td><span className="quantity__cart">{prod.count}</span></td>
                                     <td><span className="table__subtotal">${prod.price * prod.count}</span></td>
-                                    <td><button><ion-icon name="trash-outline"></ion-icon></button></td>
+                                    <td><button onClick={() => {deleteItem(prod.id)}}><ion-icon name="trash-outline"></ion-icon></button></td>
                                 </tr>
                             </tbody>
                         ))

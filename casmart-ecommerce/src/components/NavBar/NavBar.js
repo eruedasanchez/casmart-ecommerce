@@ -4,34 +4,24 @@ import logo from './logo-casmart.svg';
 import CartWidget from '../CartWidget/CartWidget';
 import LikeWidget from '../LikeWidget/LikeWidget';
 import HeaderActionIcons from '../HeaderActionIcons/HeaderActionIcons';
-// import { useState } from 'react';
-// import { useEffect } from 'react';
+import {useEffect, useState } from 'react';
 
 function NavBar() {
-
-    // const [headerActive, setHeaderActive] = useState(true);
-
-    // const handleHeaderActive = () => {
-    //     if(window.scrollY < 100){
-    //         setHeaderActive(false);
-    //     }
-    // }
     
-    // useEffect(() => {
-    //     handleHeaderActive();
-    // }, [])
-    
-    // useEffect(() => {
-    //     window.addEventListener("scroll", () => {
-    //         window.scrollY >= 100 ? header.classNameList.add('active') : header.classNameList.remove('active');
-    //     })
-    // }, []);
+    const [activeNavbar, setActiveNavbar] = useState(false);
 
-    
+    const handleActiveNavbar = () => {
+        if(window.scrollY >= 80){
+            setActiveNavbar(true);
+        } else {
+            setActiveNavbar(false);
+        }
+    }
+
+    useEffect(() => {window.addEventListener('scroll', handleActiveNavbar);}, [])
     
     return (
-            <header className="header">  
-        {/* // <header onScroll={handleHeaderActive} className={headerActive ? "header active" : "header"}>  */}
+        <header className={activeNavbar ? "header active" : "header"}>  
             <div className="container">
                 <div className="overlay"></div> 
                 <div className="header-search">

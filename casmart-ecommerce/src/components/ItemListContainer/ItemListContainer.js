@@ -18,8 +18,6 @@ export const ItemListContainer = () => {
             .then((res) => {
                 setProducts(res.docs.map((prod) => {return {id: prod.id, ... prod.data()}}))
             })
-
-        
     }, [category])
 
     return (

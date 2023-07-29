@@ -85,7 +85,7 @@ h3 > a{
 /* reused style category section */
 
 .section{
-  padding-block: var(--section-padding);
+  padding-block: 75px;
 }
 
 .w-100{
