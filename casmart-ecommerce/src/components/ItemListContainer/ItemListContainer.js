@@ -16,7 +16,7 @@ export const ItemListContainer = () => {
         
         getDocs(queryFilter)
             .then((res) => {
-                setProducts(res.docs.map((prod) => {return {id: prod.id, ... prod.data()}}))
+                setProducts(res.docs.map((prod) => {return {id: prod.id, ...prod.data()}}))
             })
     }, [category])
 

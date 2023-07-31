@@ -1,0 +1,131 @@
+/*=============== REUSED STYLE ===============*/
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.container--checkout{
+    max-width: 1320px;
+    margin-inline: auto;
+    padding-inline: 0.75rem;
+}
+
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section--lg{
+    padding-block: 6.9rem;
+}
+
+.section__title{
+    font-size: 1.375rem;;
+    margin-bottom: 1.5rem;
+}
+
+/* .form__input{
+    border: 1px solid hsl(113, 15%, 90%);
+    padding-inline: 1rem;
+    height: 45px;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+} */
+
+.form{
+    row-gap: 1rem;
+}
+
+/* .form__group{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+} */
+
+/*=============== CHECKOUT ===============*/
+
+.checkout__container{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.checkout__group:nth-child(2){
+    border: 1px solid hsl(113, 15%, 90%); 
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.checkout__group .section__title{
+    font-size: 1.125rem;
+}
+
+.checkout__title{
+    font-size: 0.875rem;
+}
+
+.table__container{
+    overflow-x: auto;
+}
+
+.table{
+    table-layout: auto;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.order__table thead tr th, .order__table tbody tr td{
+    border: 1px solid hsl(113, 15%, 90%); 
+    padding: 0.5rem;
+    text-align: center;
+} 
+
+.order__table thead tr th{
+    color: hsl(0, 0%, 13%);
+    font-size: 0.875rem;
+}
+
+.order__table tbody tr td:nth-child(1){
+    width: 20%;
+}
+
+.order__img{
+    width: 120px;
+}
+
+.table__quantity, .order__subtitle{
+    font-size: 0.875rem;
+} 
+
+.order__grand-total{
+    color: hsl(176, 35%, 63%);
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.payment__methods{
+    margin-block: 2.5rem 2.75rem;
+}
+
+.payment__title{
+    margin-bottom: 1.5rem;
+}
+
+.payment__option{
+    margin-bottom: 1rem;
+}
+
+.flex__check{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.payment__input{
+    width: 10%;
+    accent-color: hsl(176, 35%, 63%);
+    outline: none;
+}
+
+.payment__label{
+    font-size: 0.875rem;
+}

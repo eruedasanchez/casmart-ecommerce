@@ -1,4 +1,3 @@
-// import { useState } from 'react';
 import './ItemCount.css';
 import {Link} from 'react-router-dom';
 import minusIcon from './icon-minus.svg';

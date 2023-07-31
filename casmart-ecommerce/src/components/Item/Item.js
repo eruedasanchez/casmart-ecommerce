@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext} from 'react';
 import './Item.css';
 import {Link} from 'react-router-dom';
 import { CartContext } from '../../context/cartContext';
@@ -7,18 +7,18 @@ const Item = ({product}) => {
 
     const {cart, setCart, count} = useContext(CartContext);
 
-    const addProductFromCart = (product) => {
+    const addProductFromCard = (product) => {
         const itemAdded = {...product, count};
         const newCart = [...cart];
         const wasAddedProduct = newCart.find((prod) => prod.id === itemAdded.id);
         
         if(wasAddedProduct){
-            wasAddedProduct.count += count;
+            wasAddedProduct.count += 1;
         } else {
             newCart.push(itemAdded);
         }
         setCart(newCart);
-    } 
+    }
     
     return(
         <li>
@@ -32,7 +32,7 @@ const Item = ({product}) => {
                             <ion-icon name="eye-outline"></ion-icon>
                         </Link>
                         {/* <Link> */}
-                        <button onClick={() => {addProductFromCart(product)}} className="card-action-btn cart-btn">
+                        <button onClick={() => {addProductFromCard(product)}} className="card-action-btn cart-btn">
                             <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
                             <p>Add to cart</p>
                         </button>

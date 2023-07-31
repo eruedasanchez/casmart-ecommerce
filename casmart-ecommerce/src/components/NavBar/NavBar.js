@@ -1,10 +1,10 @@
 import './NavBar.css';
+import {useEffect, useState} from 'react';
 import {Link, NavLink} from 'react-router-dom';
 import logo from './logo-casmart.svg';
 import CartWidget from '../CartWidget/CartWidget';
 import LikeWidget from '../LikeWidget/LikeWidget';
 import HeaderActionIcons from '../HeaderActionIcons/HeaderActionIcons';
-import {useEffect, useState } from 'react';
 
 function NavBar() {
     

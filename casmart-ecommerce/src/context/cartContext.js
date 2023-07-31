@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import {createContext, useEffect, useState} from "react";
 
 export const CartContext = createContext();
 
@@ -22,6 +22,7 @@ export const CartProvider = ({children}) => {
             newCart.push(itemAdded);
         }
         setCart(newCart);
+        setCount(1);
     }
     
     const deleteItem = (id) => {
