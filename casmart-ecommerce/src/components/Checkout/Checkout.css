@@ -25,51 +25,14 @@ table{
     margin-bottom: 1.5rem;
 }
 
-/* .form__input{
-    border: 1px solid hsl(113, 15%, 90%);
-    padding-inline: 1rem;
-    height: 45px;
-    border-radius: 0.25rem;
-    font-size: 0.75rem;
-} */
-
 .form{
     row-gap: 1rem;
 }
-
-/* .form__group{
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-} */
 
 /*=============== CHECKOUT ===============*/
 
 .checkout__container{
     grid-template-columns: repeat(2, 1fr);
-}
-
-.checkout__group:nth-child(2){
-    border: 1px solid hsl(113, 15%, 90%); 
-    padding: 2rem;
-    border-radius: 0.5rem;
-}
-
-.checkout__group .section__title{
-    font-size: 1.125rem;
-}
-
-.checkout__title{
-    font-size: 0.875rem;
-}
-
-.table__container{
-    overflow-x: auto;
-}
-
-.table{
-    table-layout: auto;
-    width: 100%;
-    margin-bottom: 2rem;
 }
 
 .order__table thead tr th, .order__table tbody tr td{

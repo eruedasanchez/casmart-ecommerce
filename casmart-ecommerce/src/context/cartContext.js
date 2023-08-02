@@ -40,7 +40,7 @@ export const CartProvider = ({children}) => {
     }
     
     const shipping = () => {
-        return subtotal() * 0.05;
+        return subtotal() * 0.005;
     }
     
     const total = () => {

@@ -1,0 +1,13 @@
+.checkout__group:nth-child(2){
+    border: 1px solid hsl(113, 15%, 90%); 
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.checkout__group .section__title{
+    font-size: 1.125rem;
+}
+
+.checkout__title{
+    font-size: 0.875rem;
+}
