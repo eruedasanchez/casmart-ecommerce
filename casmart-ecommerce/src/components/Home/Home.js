@@ -7,10 +7,10 @@ import Newsletter from '../Newsletter/Newsletter';
 export const Home = () => {
     return(
         <>
-        <Banner title="We are on sale" subtitle="High Moda Fashion House" button="Shop now!"/>
+        <Banner title="We are on sale" subtitle="High Moda Fashion House" button="Conocer mas!"/>
         <section className="section product">
                 <div className="container">
-                    <h2 className="h2 section-title">Products of the week</h2>
+                    <h2 className="h2 section-title">Lo ultimo en moda</h2>
                     <ul className="filter-list">
                         <li><Link to='/category/best-seller' className="filter-btn active">Best Seller</Link></li>
                         <li><Link to='/category/hot-collection' className="filter-btn">Hot Collection</Link></li>

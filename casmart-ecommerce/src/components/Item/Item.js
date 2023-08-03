@@ -31,12 +31,10 @@ const Item = ({product}) => {
                         <Link to={`/item/${product.id}`} className="card-action-btn">
                             <ion-icon name="eye-outline"></ion-icon>
                         </Link>
-                        {/* <Link> */}
                         <button onClick={() => {addProductFromCard(product)}} className="card-action-btn cart-btn">
                             <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                            <p>Add to cart</p>
+                            <p>Agregar</p>
                         </button>
-                        {/* </Link> */}
                         <Link to={`/item/${product.id}`} className="card-action-btn">
                             <ion-icon name="heart-outline"></ion-icon>
                         </Link>

@@ -9,6 +9,7 @@ import HeaderActionIcons from '../HeaderActionIcons/HeaderActionIcons';
 function NavBar() {
     
     const [activeNavbar, setActiveNavbar] = useState(false);
+    const [hamburgerMenu, setHamburgerMenu] = useState(false);
 
     const handleActiveNavbar = () => {
         if(window.scrollY >= 80){
@@ -18,12 +19,16 @@ function NavBar() {
         }
     }
 
+    const handleHamburgerMenu = () => {
+        setHamburgerMenu(!hamburgerMenu);
+    }
+
     useEffect(() => {window.addEventListener('scroll', handleActiveNavbar);}, [])
     
     return (
         <header className={activeNavbar ? "header active" : "header"}>  
             <div className="container">
-                <div className="overlay"></div> 
+                <div onClick={handleHamburgerMenu} className={hamburgerMenu ? "overlay active" : "overlay"}></div> 
                 <div className="header-search">
                     <input type="search" name="search" placeholder="Search product..." className="input-field"/>
                     <button className="search-btn" aria-label="Search">
@@ -39,17 +44,17 @@ function NavBar() {
                     <CartWidget/>
                     <LikeWidget/>
                 </div>
-                <button className="nav-open-btn" data-nav-open-btn aria-label="Open menu">
+                <button onClick={handleHamburgerMenu} className="nav-open-btn" aria-label="Open menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <nav className="navbar">
+                <nav className={hamburgerMenu ? "navbar active" : "navbar"}>
                     <div className="navbar-top">
                         <Link to='/' className="logo">
                             <img src={logo} alt="Casmart logo" style={{width:"130", height:"31"}}/>
                         </Link>
-                        <button className="nav-close-btn" aria-label="Close menu">
+                        <button onClick={handleHamburgerMenu} className="nav-close-btn" aria-label="Close menu">
                             <ion-icon name="close-outline"></ion-icon>
                         </button>
                     </div>

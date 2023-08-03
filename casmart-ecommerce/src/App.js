@@ -11,7 +11,6 @@ import Footer from './components/Footer/Footer';
 import './Media.css';
 import {CartProvider} from './context/cartContext';
 
-
 function App() {
   return (
     <CartProvider>
@@ -33,8 +32,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-

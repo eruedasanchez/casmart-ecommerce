@@ -28,7 +28,7 @@ const ItemDetail = ({item}) => {
                 </div>
                 <div className="details__group">
                         <h3 className="details__title">{item.name}</h3>
-                        <p className="details__brand">Category: <span>{item.category}</span></p>
+                        <p className="details__brand">Categoria: <span>{item.category}</span></p>
                         <div className="details__price flex">
                             <span className="new__price">${item.price}</span>
                             <span className="old__price">${item.oldprice}</span>
@@ -36,9 +36,9 @@ const ItemDetail = ({item}) => {
                         </div>
                         <p className="short__description">{item.description}</p>
                         <ul className="product__list">
-                            <li className="list__item flex"><ion-icon name="sparkles-outline"></ion-icon> 1 Year GUCCI® US Warranty</li>
-                            <li className="list__item flex"><ion-icon name="refresh-circle-outline"></ion-icon>30 Day Return Policy</li>
-                            <li className="list__item flex"><ion-icon name="card-outline"></ion-icon>Cash on Delivery available</li>
+                            <li className="list__item flex"><ion-icon name="sparkles-outline"></ion-icon> 1 Año de Garantia GUCCI® US </li>
+                            <li className="list__item flex"><ion-icon name="refresh-circle-outline"></ion-icon>30 Dias para Devolucion</li>
+                            <li className="list__item flex"><ion-icon name="card-outline"></ion-icon>Pago disponible en Efectivo</li>
                         </ul>
                         <div className="details__color flex">
                             <span className="details__color-title">Color</span>
@@ -51,7 +51,7 @@ const ItemDetail = ({item}) => {
                             </ul>
                         </div>
                         <div className="details__size flex">
-                            <span className="details__size-title">Size</span>
+                            <span className="details__size-title">Talle</span>
                             <ul className="size__list">
                                 <li><Link href="#" className="size__link size-active">S</Link></li>
                                 <li><Link href="#" className="size__link">M</Link></li>
@@ -62,8 +62,8 @@ const ItemDetail = ({item}) => {
                         <ItemCount count={count} handleDecrement={handleDecrement} handleIncrement={handleIncrement} handleAddToCart={() => {addToCart(item, count)}}/>   
                         <ul className="details__meta">
                             <li className="meta__list flex"><span>ID:</span> {item.id}</li>
-                            <li className="meta__list flex"><span>Tags:</span> Cloth, Women, Sweater</li>
-                            <li className="meta__list flex"><span>Availability:</span> {item.stock} Items In Stock</li>
+                            <li className="meta__list flex"><span>Etiquetas:</span> Ropa, Mujer, Sweater</li>
+                            <li className="meta__list flex"><span>Disponibilidad:</span> {item.stock} Items In Stock</li>
                         </ul>
                 </div>
             </div>

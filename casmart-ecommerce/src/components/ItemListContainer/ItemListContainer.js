@@ -1,4 +1,3 @@
-// import {dataProvider} from "../Functions/dataProvider";
 import {useState, useEffect} from "react";
 import {Link, useParams} from "react-router-dom";
 import ItemList from '../ItemList/ItemList';
@@ -27,7 +26,7 @@ export const ItemListContainer = () => {
                     {products.length > 0 ? <ItemList products={products}/> : <Spinner/>}
                 </ul>
                 <Link to='/category/'>
-                    <button className="btn btn-outline">View All Products</button>
+                    <button className="btn btn-outline">Ver todos los productos</button>
                 </Link>
             </div>
         </section>
