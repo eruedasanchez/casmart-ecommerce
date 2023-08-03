@@ -1,11 +1,14 @@
-import {useContext} from 'react';
-import {Link} from 'react-router-dom';
+import {useContext, useState} from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 import {CartContext} from '../../context/cartContext';
 
 const ItemDetail = ({item}) => {
     const {addToCart, count, setCount} = useContext(CartContext);
+    
+    const gallery = {firstThumbnail: item.img, secondThumbnail: item.secondaryimg};
+
+    const [activeImg, setActiveImg] = useState(gallery.firstThumbnail);
     
     const handleDecrement = () => {
         count > 1 && setCount(count - 1);
@@ -19,12 +22,11 @@ const ItemDetail = ({item}) => {
         <section className="details section--lg">
             <div className="details__container container--detail grid">
                 <div className="details__group">
-                        <img src={item.img} alt={item.name} className="details__img"/>
-                        <div className="details__small-images grid">
-                            <img src={item.secondaryimg} alt="" className="details__small-img"/>
-                            <img src={item.img} alt="" className="details__small-img"/>
-                            <img src="{item.secondaryimg}" alt="" className="details__small-img"/>
-                        </div>
+                    <img src={activeImg} alt={item.name} className="details__img"/>
+                    <div className="details__small-images grid">
+                        <img onClick={() => setActiveImg(gallery.firstThumbnail)} src={gallery.firstThumbnail} alt={item.name} className="details__small-img"/>
+                        <img onClick={() => setActiveImg(gallery.secondThumbnail)} src={gallery.secondThumbnail} alt={item.name} className="details__small-img"/>
+                    </div>
                 </div>
                 <div className="details__group">
                         <h3 className="details__title">{item.name}</h3>
@@ -43,27 +45,27 @@ const ItemDetail = ({item}) => {
                         <div className="details__color flex">
                             <span className="details__color-title">Color</span>
                             <ul className="color__list">
-                                <li><Link href="#" className="color__link" style={{backgroundColor: "hsl(176, 35%, 63%)"}}></Link></li>
-                                <li><Link href="#" className="color__link" style={{backgroundColor: "hsl(356, 65%, 63%)"}}></Link></li>
-                                <li><Link href="#" className="color__link" style={{backgroundColor: "hsl(131, 85%, 23%)"}}></Link></li>
-                                <li><Link href="#" className="color__link" style={{backgroundColor: "hsl(0, 0%, 0%)"}}></Link></li>
-                                <li><Link href="#" className="color__link" style={{backgroundColor: "hsl(0, 0%, 44%)"}}></Link></li>
+                                <li><button className="color__link" style={{backgroundColor: "hsl(176, 35%, 63%)"}}></button></li>
+                                <li><button className="color__link" style={{backgroundColor: "hsl(356, 65%, 63%)"}}></button></li>
+                                <li><button className="color__link" style={{backgroundColor: "hsl(131, 85%, 23%)"}}></button></li>
+                                <li><button className="color__link" style={{backgroundColor: "hsl(0, 0%, 0%)"}}></button></li>
+                                <li><button className="color__link" style={{backgroundColor: "hsl(0, 0%, 44%)"}}></button></li>
                             </ul>
                         </div>
                         <div className="details__size flex">
                             <span className="details__size-title">Talle</span>
                             <ul className="size__list">
-                                <li><Link href="#" className="size__link size-active">S</Link></li>
-                                <li><Link href="#" className="size__link">M</Link></li>
-                                <li><Link href="#" className="size__link">L</Link></li>
-                                <li><Link href="#" className="size__link">XL</Link></li>
+                                <li><button className="size__link size-active">S</button></li>
+                                <li><button className="size__link">M</button></li>
+                                <li><button className="size__link">L</button></li>
+                                <li><button className="size__link">XL</button></li>
                             </ul>
                         </div>
                         <ItemCount count={count} handleDecrement={handleDecrement} handleIncrement={handleIncrement} handleAddToCart={() => {addToCart(item, count)}}/>   
                         <ul className="details__meta">
                             <li className="meta__list flex"><span>ID:</span> {item.id}</li>
-                            <li className="meta__list flex"><span>Etiquetas:</span> Ropa, Mujer, Sweater</li>
-                            <li className="meta__list flex"><span>Disponibilidad:</span> {item.stock} Items In Stock</li>
+                            <li className="meta__list flex"><span>Etiquetas:</span> Ropa, Mujer, Moda</li>
+                            <li className="meta__list flex"><span>Disponibilidad:</span> {item.stock} Items en stock</li>
                         </ul>
                 </div>
             </div>
