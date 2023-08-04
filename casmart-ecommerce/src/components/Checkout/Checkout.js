@@ -17,16 +17,85 @@ const Checkout = () => {
         surname: "",
         city: "",
         country: "",
-        postcode: "",
-        email: ""
+        phone: "",
+        email: "",
+        comment: ""
     });
+
+    const [errors, setErrors] = useState({});
+
+    const validate = (clientInformation) => {
+        let isError = false;
+        let errors = {};
+        let formatText = /^[A-Za-zÑñÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+        let formatEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{1,15}$/;
+        let formatComment = /^.{0,300}$/;
+        let formatPhone = /^.{1,12}$/;
+        let formatLength = /^.{1,150}$/;
+
+        if(!formatText.test(clientInformation.name)){
+            errors.name = 'El campo Nombre solo acepta letras y espacios';
+            isError = true;
+        } else if(!formatLength.test(clientInformation.name)){
+            errors.name = 'El campo Nombre solo acepta hasta 150 caracteres';
+            isError = true;
+        }
+
+        if(!formatText.test(clientInformation.surname)){
+            errors.surname = 'El campo Apellido solo acepta letras y espacios';
+            isError = true;
+        } else if(!formatLength.test(clientInformation.surname)){
+            errors.surname = 'El campo Apellido solo acepta hasta 150 caracteres';
+            isError = true;
+        }
+
+        if(!formatText.test(clientInformation.city)){
+            errors.city = 'El campo Ciudad solo acepta letras y espacios';
+            isError = true;
+        } else if(!formatLength.test(clientInformation.city)){
+            errors.city = 'El campo Ciudad solo acepta hasta 150 caracteres';
+            isError = true;
+        }
+        
+        if(!formatText.test(clientInformation.country)){
+            errors.country = 'El campo Pais solo acepta letras y espacios';
+            isError = true;
+        } else if(!formatLength.test(clientInformation.country)){
+            errors.country = 'El campo Pais solo acepta hasta 150 caracteres';
+            isError = true;
+        }
+
+        if(!formatPhone.test(clientInformation.phone)){
+            errors.phone = 'Campo Telefono invalido. Sin 0 ni - (Ej: 1123456789).';
+            isError = true;
+        }
+        
+        if(!formatEmail.test(clientInformation.email)){
+            errors.email = 'Formato de email invalido. Intenta con @gmail.com, @hotmail.com, @live.com.ar o @yahoo.com';
+            isError = true;
+        }
+
+        if(!formatComment.test(clientInformation.comment)){
+            errors.comment = 'Atencion: Su comentario no debe superar los 300 caracteres';
+            isError = true;
+        }
+
+        return isError ? errors : null;
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const day = new Date();
         const priceOrder = total();
         const data = {clientInformation, cart, priceOrder, day};
-        generateOrder(data);
+
+        const err = validate(clientInformation);
+
+        if(err === null){
+            generateOrder(data);
+        } else {
+            setErrors(err);
+        }
     }
 
     const generateOrder = async (data) => {
@@ -43,10 +112,14 @@ const Checkout = () => {
 
     if(orderId){
         return(
+            <>
+            <NavBar/>
             <div>
                 <h1>Gracias por tu compra</h1>
                 <p>Tu numero de ID es {orderId}</p>
-            </div> 
+            </div>
+            <Footer/>
+            </> 
         )
     }       
     
@@ -57,7 +130,7 @@ const Checkout = () => {
                 cart.length > 0 ?
                     <section className="checkout section--lg container--checkout">
                         <div className="checkout__container grid">
-                            <Form clientInformation={clientInformation} handleSubmit={handleSubmit} handleClientInformation={handleClientInformation}/>
+                            <Form clientInformation={clientInformation} errors={errors} handleSubmit={handleSubmit} handleClientInformation={handleClientInformation}/>
                             <Brief cart={cart} subtotal={subtotal} shipping={shipping} total={total}/>
                         </div>
                     </section>
