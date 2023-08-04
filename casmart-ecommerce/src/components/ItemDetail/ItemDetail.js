@@ -7,9 +7,18 @@ const ItemDetail = ({item}) => {
     const {addToCart, count, setCount} = useContext(CartContext);
     
     const gallery = {firstThumbnail: item.img, secondThumbnail: item.secondaryimg};
-
     const [activeImg, setActiveImg] = useState(gallery.firstThumbnail);
     
+    const [size, setSize] = useState(false);
+    
+    const handleSize = (e) => {
+        if(e.currentTarget !== null){
+            setSize(!size);
+        } else {
+            setSize(false)
+        }
+    }
+
     const handleDecrement = () => {
         count > 1 && setCount(count - 1);
     }
@@ -55,10 +64,13 @@ const ItemDetail = ({item}) => {
                         <div className="details__size flex">
                             <span className="details__size-title">Talle</span>
                             <ul className="size__list">
-                                <li><button className="size__link size-active">S</button></li>
+                                <li><button onClick={handleSize} className={size ? "size__link size-active" : "size__link"}>S</button></li>
                                 <li><button className="size__link">M</button></li>
-                                <li><button className="size__link">L</button></li>
+                                <li><button onClick={handleSize} className={size ? "size__link size-active" : "size__link"}>L</button></li>
                                 <li><button className="size__link">XL</button></li>
+                                {/* className={size ? "size__link size-active" : "size__link"} */}
+                                {/* className={size ? "size__link size-active" : "size__link"}
+                                className={size ? "size__link size-active" : "size__link"} */}
                             </ul>
                         </div>
                         <ItemCount count={count} handleDecrement={handleDecrement} handleIncrement={handleIncrement} handleAddToCart={() => {addToCart(item, count)}}/>   

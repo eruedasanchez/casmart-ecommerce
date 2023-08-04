@@ -19,12 +19,12 @@ const Cart = () => {
                 <table className="table">
                     <thead>
                         <tr>  
-                            <th>Image</th>
-                            <th>Name</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
                             <th>Subtotal</th>
-                            <th>Remove</th>
+                            <th>Eliminar</th>
                         </tr>
                     </thead>
                     {
@@ -44,46 +44,46 @@ const Cart = () => {
                 </table>
             </div>
             <div className="cart__actions">
-                <button onClick={handleEmptyCart} className="btn btn-primary flex btn--md"><ion-icon name="trash-outline"></ion-icon>Empty Cart</button>
+                <button onClick={handleEmptyCart} className="btn btn-primary flex btn--md"><ion-icon name="trash-outline"></ion-icon>Vaciar Carrito</button>
                 <Link to='/category/'>
-                    <button className="btn btn-primary flex btn--md"><ion-icon name="bag-handle-outline"></ion-icon>Continue Shopping</button>
+                    <button className="btn btn-primary flex btn--md"><ion-icon name="bag-handle-outline"></ion-icon>Continuar comprando</button>
                 </Link>
             </div>
             <div className="divider"></div>
             <div className="cart__group grid">
                 <div>
                     <div className="cart__shipping">
-                        <h3 className="section__title">Calculate Shipping</h3>
+                        <h3 className="section__title">Costo de Envio</h3>
                         <form action="" className="form grid">
-                            <input type="text" placeholder="State / Country" className="form__input"/>
+                            <input type="text" placeholder="Estado / Pais" className="form__input"/>
                             <div className="form__group grid">
-                                <input type="text" placeholder="City" className="form__input"/>
-                                <input type="number" placeholder="PostCode / ZIP" className="form__input"/>
+                                <input type="text" placeholder="Ciudad" className="form__input"/>
+                                <input type="number" placeholder="Codigo postal" className="form__input"/>
                             </div>
                             <div>
-                                <button className="btn btn-primary flex btn--sm"><ion-icon name="refresh-circle-outline"></ion-icon>Update</button>
+                                <button className="btn btn-primary flex btn--sm"><ion-icon name="refresh-circle-outline"></ion-icon>Calcular</button>
                             </div>
                         </form>
                     </div>
                     <div className="cart__coupon">
-                        <h3 className="section__title">Apply Coupon</h3>
+                        <h3 className="section__title">Cupon de Descuento</h3>
                         <form action="" className="coupon__form form grid">
                             <div className="form__group grid">
-                            <input type="text" className="form__input" placeholder="Enter Your Coupon"/>
+                            <input type="text" className="form__input" placeholder="Ingresa tu cupon"/>
                                 <div className="form__btn">
-                                    <button className="btn btn-primary flex btn--sm"><ion-icon name="color-wand-outline"></ion-icon>Apply</button>
+                                    <button className="btn btn-primary flex btn--sm"><ion-icon name="color-wand-outline"></ion-icon>Aplicar</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
                 <div className="cart__total">
-                        <h3 className="section__title">Cart Totals</h3>
+                        <h3 className="section__title">Total Carrito</h3>
                         <table className="cart__total-table">
                             <thead>
                                 <tr>
-                                    <td><span className="cart__total-title">Cart Subtotal</span></td>
-                                    <td><span className="cart__total-title">Shipping</span></td>
+                                    <td><span className="cart__total-title">Subtotal</span></td>
+                                    <td><span className="cart__total-title">Envio</span></td>
                                     <td><span className="cart__total-title">Total</span></td>
                                 </tr>    
                             </thead>
@@ -96,7 +96,7 @@ const Cart = () => {
                             </tbody>
                         </table>
                         <Link to='/checkout'>
-                            <button className="btn btn-primary flex btn--md"><ion-icon name="bag-check-outline"></ion-icon>Proceed To Checkout</button>
+                            <button className="btn btn-primary flex btn--md"><ion-icon name="bag-check-outline"></ion-icon>Confirmar compra</button>
                         </Link>
                 </div>
             </div>
