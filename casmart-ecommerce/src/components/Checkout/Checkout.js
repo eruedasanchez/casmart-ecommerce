@@ -4,6 +4,8 @@ import "./Checkout.css";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import Form from "../Form/Form";
 import Brief from "../Brief/Brief";
+import NavBar from "../NavBar/NavBar";
+import Footer from "../Footer/Footer";
 
 const Checkout = () => {
     const {cart, total, subtotal, shipping, cleanCart} = useContext(CartContext);
@@ -44,17 +46,26 @@ const Checkout = () => {
             <div>
                 <h1>Gracias por tu compra</h1>
                 <p>Tu numero de ID es {orderId}</p>
-            </div>
+            </div> 
         )
-    }
-
+    }       
+    
     return (
-        <section className="checkout section--lg container--checkout">
-            <div className="checkout__container grid">
-                <Form clientInformation={clientInformation} handleSubmit={handleSubmit} handleClientInformation={handleClientInformation}/>
-                <Brief cart={cart} subtotal={subtotal} shipping={shipping} total={total}/>
-            </div>
-        </section>
+        <>
+        <NavBar/>
+            {
+                cart.length > 0 ?
+                    <section className="checkout section--lg container--checkout">
+                        <div className="checkout__container grid">
+                            <Form clientInformation={clientInformation} handleSubmit={handleSubmit} handleClientInformation={handleClientInformation}/>
+                            <Brief cart={cart} subtotal={subtotal} shipping={shipping} total={total}/>
+                        </div>
+                    </section>
+                :
+                    <h3 className="section__title">El carrito esta vacio!</h3>
+            }
+        <Footer/>
+        </>
     )
 }
 

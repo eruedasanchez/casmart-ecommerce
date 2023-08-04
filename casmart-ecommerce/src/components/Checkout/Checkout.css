@@ -35,3 +35,11 @@ table{
     grid-template-columns: repeat(2, 1fr);
 }
 
+.cart__actions{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+

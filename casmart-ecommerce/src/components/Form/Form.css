@@ -11,3 +11,8 @@
 .checkout__title{
     font-size: 0.875rem;
 }
+
+.w-comfirm{
+    width: 70%;
+    text-align: center;
+}

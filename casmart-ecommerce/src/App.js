@@ -7,7 +7,6 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Error from './components/Error/Error';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
-import Footer from './components/Footer/Footer';
 import './Media.css';
 import {CartProvider} from './context/cartContext';
 
@@ -15,20 +14,19 @@ function App() {
   return (
     <CartProvider>
       <BrowserRouter>
-        <NavBar/>
         <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/category/' element={<ItemListContainer/>}/>
-          <Route path='/category/:category' element={<ItemListContainer/>}/>
-          <Route path='/item/:id' element={<ItemDetailContainer/>}/>
-          <Route path='/cart' element={<Cart/>}/>
-          <Route path='/checkout' element={<Checkout/>}/>
+          <Route exact path='/' element={<Home/>}/>
+          <Route exact path='/category/' element={<ItemListContainer/>}/>
+          <Route exact path='/category/:category' element={<ItemListContainer/>}/>
+          <Route exact path='/item/:id' element={<ItemDetailContainer/>}/>
+          <Route exact path='/cart' element={<Cart/>}/>
+          <Route exact path='/checkout' element={<Checkout/>}/>
           <Route path='*' element={<Error/>}/>
         </Routes>
-        <Footer/>
       </BrowserRouter>
     </CartProvider>
   );
 }
 
 export default App;
+

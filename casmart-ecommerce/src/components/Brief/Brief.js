@@ -52,7 +52,7 @@ const Brief = ({cart, subtotal, shipping, total}) => {
                             </div>
                             <div className="payment__option flex__check">
                                 <input type="radio" name="radio" defaultChecked className="payment__input"/>
-                                <label className="payment__label">Paypal</label>
+                                <label className="payment__label">Tarjeta de Credito</label>
                             </div>
                         </div>
                     </>

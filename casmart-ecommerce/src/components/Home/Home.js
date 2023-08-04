@@ -3,10 +3,13 @@ import {Link} from 'react-router-dom';
 import Banner from '../Banner/Banner';
 import ItemListContainer from '../ItemListContainer/ItemListContainer';
 import Newsletter from '../Newsletter/Newsletter';
+import Footer from '../Footer/Footer';
+import NavBar from '../NavBar/NavBar';
 
 export const Home = () => {
     return(
         <>
+        <NavBar/>
         <Banner title="We are on sale" subtitle="High Moda Fashion House" button="Conocer mas!"/>
         <section className="section product">
                 <div className="container">
@@ -21,6 +24,7 @@ export const Home = () => {
                 </div>
         </section>
         <Newsletter/>
+        <Footer/>
         </>
     )
 }

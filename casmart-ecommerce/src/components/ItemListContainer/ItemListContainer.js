@@ -3,6 +3,8 @@ import {Link, useParams} from "react-router-dom";
 import ItemList from '../ItemList/ItemList';
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 import Spinner from "../Spinner/Spinner";
+import NavBar from "../NavBar/NavBar";
+import Error from "../Error/Error";
 
 export const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
@@ -19,7 +21,15 @@ export const ItemListContainer = () => {
             })
     }, [category])
 
+    // if(!(category === "best-seller" || category === "hot-collection" || category === "trendy" || category === "new-arrival")){
+    //     return(
+    //         <Error/>
+    //     )
+    // }
+
     return (
+        <>
+        <NavBar/>
         <section className="section product">
             <div className="container">
                 <ul className="product-list">
@@ -30,6 +40,7 @@ export const ItemListContainer = () => {
                 </Link>
             </div>
         </section>
+        </>
     );
 }
 

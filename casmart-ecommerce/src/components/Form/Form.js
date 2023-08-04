@@ -14,7 +14,7 @@ const Form = ({clientInformation, handleSubmit, handleClientInformation}) => {
                 <input type="email" placeholder="Confirmar Email" value={clientInformation.email} onChange={handleClientInformation} name="email" required className="form__input"/>
                 <h3 className="checkout__title">Informacion adicional</h3>
                 <textarea name="" placeholder="Escriba aqui su comentario" id="" cols="30" rows="10" className="form__input textarea"></textarea>
-                <button type="submit" className="btn--add btn--md">Realizar pedido</button>
+                <button type="submit" className="btn--add btn--md w-comfirm">Realizar pedido</button>
             </form>
         </div>
     )

@@ -2,6 +2,8 @@ import {Link} from "react-router-dom";
 import "./Cart.css";
 import {useContext} from "react";
 import {CartContext} from "../../context/cartContext";
+import NavBar from "../NavBar/NavBar";
+import Footer from "../Footer/Footer";
 
 const Cart = () => {
     const {cart, deleteItem, subtotal, shipping, total, cleanCart} = useContext(CartContext);
@@ -11,6 +13,8 @@ const Cart = () => {
     }
     
     return (
+        <>
+        <NavBar/>
         <section className="cart section--lg container--cart">
             {
                 cart.length > 0 ?
@@ -102,7 +106,7 @@ const Cart = () => {
             </div>
             </> :
             <>
-            <h3 className="section__title">The cart is empty!</h3>
+            <h3 className="section__title">El carrito esta vacio!</h3>
             <div className="cart__actions">
                 <Link to='/category/'>
                     <button className="btn btn-primary flex btn--md"><ion-icon name="bag-handle-outline"></ion-icon>Continue Shopping</button>
@@ -111,6 +115,8 @@ const Cart = () => {
             </>
             }
         </section>
+        <Footer/>
+        </>
     )
 }
 

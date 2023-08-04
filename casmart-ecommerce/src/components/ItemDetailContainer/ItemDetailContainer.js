@@ -4,6 +4,8 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 import './ItemDetailContainer.css';
 import {doc, getDoc, getFirestore} from 'firebase/firestore';
 import Spinner from '../Spinner/Spinner';
+import NavBar from '../NavBar/NavBar';
+import Footer from '../Footer/Footer';
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState(null);
@@ -20,9 +22,13 @@ const ItemDetailContainer = () => {
     }, [id])
     
     return (
+        <>
+        <NavBar/>
         <div className='contaner-item'>
-        {item ? <ItemDetail item={item}/> : <Spinner/>}
+            {item ? <ItemDetail item={item}/> : <Spinner/>}
         </div>
+        <Footer/>
+        </>
     )
 }
 
