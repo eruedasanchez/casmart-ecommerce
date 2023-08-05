@@ -9,16 +9,39 @@ const ItemDetail = ({item}) => {
     const gallery = {firstThumbnail: item.img, secondThumbnail: item.secondaryimg};
     const [activeImg, setActiveImg] = useState(gallery.firstThumbnail);
     
-    const [size, setSize] = useState(false);
+    const [sizeSmall, setSizeSmall] = useState(true);
+    const [sizeMedium, setSizeMedium] = useState(false);
+    const [sizeLarge, setSizeLarge] = useState(false);
+    const [sizeExtraLarge, setSizeExtraLarge] = useState(false);
     
-    const handleSize = (e) => {
-        if(e.currentTarget !== null){
-            setSize(!size);
-        } else {
-            setSize(false)
-        }
+    const handleSizeSmall = () => {
+        setSizeSmall(!sizeSmall);
+        setSizeMedium(false);
+        setSizeLarge(false);
+        setSizeExtraLarge(false);
     }
 
+    const handleSizeMedium = () => {
+        setSizeSmall(false);
+        setSizeMedium(!sizeMedium);
+        setSizeLarge(false);
+        setSizeExtraLarge(false);
+    }
+
+    const handleSizeLarge = () => {
+        setSizeSmall(false);
+        setSizeMedium(false);
+        setSizeLarge(!sizeLarge);
+        setSizeExtraLarge(false);
+    }
+
+    const handleSizeExtraLarge = () => {
+        setSizeSmall(false);
+        setSizeMedium(false);
+        setSizeLarge(false);
+        setSizeExtraLarge(!sizeExtraLarge);
+    }
+    
     const handleDecrement = () => {
         count > 1 && setCount(count - 1);
     }
@@ -64,10 +87,10 @@ const ItemDetail = ({item}) => {
                         <div className="details__size flex">
                             <span className="details__size-title">Talle</span>
                             <ul className="size__list">
-                                <li><button onClick={handleSize} className={size ? "size__link size-active" : "size__link"}>S</button></li>
-                                <li><button className="size__link">M</button></li>
-                                <li><button onClick={handleSize} className={size ? "size__link size-active" : "size__link"}>L</button></li>
-                                <li><button className="size__link">XL</button></li>
+                                <li><button onClick={handleSizeSmall} className={sizeSmall ? "size__link size-active" : "size__link"}>S</button></li>
+                                <li><button onClick={handleSizeMedium} className={sizeMedium ? "size__link size-active" : "size__link"}>M</button></li>
+                                <li><button onClick={handleSizeLarge} className={sizeLarge ? "size__link size-active" : "size__link"}>L</button></li>
+                                <li><button onClick={handleSizeExtraLarge} className={sizeExtraLarge ? "size__link size-active" : "size__link"}>XL</button></li>
                                 {/* className={size ? "size__link size-active" : "size__link"} */}
                                 {/* className={size ? "size__link size-active" : "size__link"}
                                 className={size ? "size__link size-active" : "size__link"} */}

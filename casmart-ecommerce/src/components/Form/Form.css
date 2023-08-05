@@ -16,3 +16,10 @@
     width: 70%;
     text-align: center;
 }
+
+.alert{
+    padding: 0.1rem;
+    padding-left: 0.4rem;
+    background: rgba(163,219,209,1);
+    color: white;
+}

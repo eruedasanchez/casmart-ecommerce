@@ -4,7 +4,6 @@ import ItemList from '../ItemList/ItemList';
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 import Spinner from "../Spinner/Spinner";
 import NavBar from "../NavBar/NavBar";
-import Error from "../Error/Error";
 
 export const ItemListContainer = () => {
     const [products, setProducts] = useState([]);

@@ -115,7 +115,7 @@ table{
 } 
 
 .table__title, .table__stock{
-    color: hsl(0, 0%, 44%);
+    color: hwb(0 44% 56%);
     font-weight: 600;
 }
 

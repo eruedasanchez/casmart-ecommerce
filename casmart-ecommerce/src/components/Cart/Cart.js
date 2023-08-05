@@ -109,7 +109,7 @@ const Cart = () => {
             <h3 className="section__title">El carrito esta vacio!</h3>
             <div className="cart__actions">
                 <Link to='/category/'>
-                    <button className="btn btn-primary flex btn--md"><ion-icon name="bag-handle-outline"></ion-icon>Continue Shopping</button>
+                    <button className="btn btn-primary flex btn--md"><ion-icon name="bag-handle-outline"></ion-icon>Continuar comprando</button>
                 </Link>
             </div>
             </>

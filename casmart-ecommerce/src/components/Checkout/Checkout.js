@@ -6,6 +6,8 @@ import Form from "../Form/Form";
 import Brief from "../Brief/Brief";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
+import { Link } from "react-router-dom";
+import Congrats from "../Congrats/Congrats";
 
 const Checkout = () => {
     const {cart, total, subtotal, shipping, cleanCart} = useContext(CartContext);
@@ -112,14 +114,7 @@ const Checkout = () => {
 
     if(orderId){
         return(
-            <>
-            <NavBar/>
-            <div>
-                <h1>Gracias por tu compra</h1>
-                <p>Tu numero de ID es {orderId}</p>
-            </div>
-            <Footer/>
-            </> 
+            <Congrats clientInformation={clientInformation} orderId={orderId}/>
         )
     }       
     
@@ -135,7 +130,14 @@ const Checkout = () => {
                         </div>
                     </section>
                 :
-                    <h3 className="section__title">El carrito esta vacio!</h3>
+                <>
+                <h3 className="section__title-checkout">El carrito esta vacio!</h3>
+                <div className="cart__actions padding">
+                    <Link to='/category/'>
+                        <button className="btn btn-primary flex btn--md"><ion-icon name="bag-handle-outline"></ion-icon>Continuar comprando</button>
+                    </Link>
+                </div>
+                </>
             }
         <Footer/>
         </>
