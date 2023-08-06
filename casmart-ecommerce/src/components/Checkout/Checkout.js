@@ -68,7 +68,7 @@ const Checkout = () => {
         }
 
         if(!formatPhone.test(clientInformation.phone)){
-            errors.phone = 'Campo Telefono invalido. Sin 0 ni - (Ej: 1123456789).';
+            errors.phone = 'Campo Telefono invalido. Sin - (Ej: 01123456789).';
             isError = true;
         }
         

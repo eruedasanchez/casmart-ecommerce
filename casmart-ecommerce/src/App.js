@@ -8,6 +8,7 @@ import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
 import './Media.css';
 import {CartProvider} from './context/cartContext';
+import Wishlist from './components/Wishlist/Wishlist';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path='/category/:category' element={<ItemListContainer/>}/>
           <Route exact path='/item/:id' element={<ItemDetailContainer/>}/>
           <Route exact path='/cart' element={<Cart/>}/>
+          <Route exact path='/wishlist' element={<Wishlist/>}/>
           <Route exact path='/checkout' element={<Checkout/>}/>
           <Route path='*' element={<Error/>}/>
         </Routes>

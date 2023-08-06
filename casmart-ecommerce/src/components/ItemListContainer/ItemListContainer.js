@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import {useEffect, useState} from "react";
 import {Link, useParams} from "react-router-dom";
 import ItemList from '../ItemList/ItemList';
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
@@ -25,9 +25,7 @@ export const ItemListContainer = () => {
     //         <Error/>
     //     )
     // }
-
     
-
     return (
         <>
         <NavBar/>

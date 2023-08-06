@@ -5,7 +5,7 @@ import { CartContext } from '../../context/cartContext';
 
 const Item = ({product}) => {
 
-    const {cart, setCart, count} = useContext(CartContext);
+    const {cart, setCart, count, addToWishlist} = useContext(CartContext);
 
     const addProductFromCard = (product) => {
         const itemAdded = {...product, count};
@@ -35,9 +35,9 @@ const Item = ({product}) => {
                             <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
                             <p>Agregar</p>
                         </button>
-                        <Link to={`/item/${product.id}`} className="card-action-btn">
+                        <button onClick={() => {addToWishlist(product)}} className="card-action-btn">
                             <ion-icon name="heart-outline"></ion-icon>
-                        </Link>
+                        </button>
                     </div>
                 </figure>
                 <div className="card-content">

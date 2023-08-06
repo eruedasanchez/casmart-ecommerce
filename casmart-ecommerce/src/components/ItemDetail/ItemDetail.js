@@ -4,12 +4,12 @@ import './ItemDetail.css';
 import {CartContext} from '../../context/cartContext';
 
 const ItemDetail = ({item}) => {
-    const {addToCart, count, setCount} = useContext(CartContext);
+    const {addToCart, addToWishlist, count, setCount} = useContext(CartContext);
     
     const gallery = {firstThumbnail: item.img, secondThumbnail: item.secondaryimg};
     const [activeImg, setActiveImg] = useState(gallery.firstThumbnail);
     
-    const [sizeSmall, setSizeSmall] = useState(true);
+    const [sizeSmall, setSizeSmall] = useState(false);
     const [sizeMedium, setSizeMedium] = useState(false);
     const [sizeLarge, setSizeLarge] = useState(false);
     const [sizeExtraLarge, setSizeExtraLarge] = useState(false);
@@ -91,12 +91,9 @@ const ItemDetail = ({item}) => {
                                 <li><button onClick={handleSizeMedium} className={sizeMedium ? "size__link size-active" : "size__link"}>M</button></li>
                                 <li><button onClick={handleSizeLarge} className={sizeLarge ? "size__link size-active" : "size__link"}>L</button></li>
                                 <li><button onClick={handleSizeExtraLarge} className={sizeExtraLarge ? "size__link size-active" : "size__link"}>XL</button></li>
-                                {/* className={size ? "size__link size-active" : "size__link"} */}
-                                {/* className={size ? "size__link size-active" : "size__link"}
-                                className={size ? "size__link size-active" : "size__link"} */}
                             </ul>
                         </div>
-                        <ItemCount count={count} handleDecrement={handleDecrement} handleIncrement={handleIncrement} handleAddToCart={() => {addToCart(item, count)}}/>   
+                        <ItemCount count={count} handleDecrement={handleDecrement} handleIncrement={handleIncrement} handleAddToCart={() => {addToCart(item, count)}} handleAddToWishlist={() => {addToWishlist(item)}}/>   
                         <ul className="details__meta">
                             <li className="meta__list flex"><span>ID:</span> {item.id}</li>
                             <li className="meta__list flex"><span>Etiquetas:</span> Ropa, Mujer, Moda</li>

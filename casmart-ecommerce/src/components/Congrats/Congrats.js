@@ -8,8 +8,8 @@ const Congrats = ({clientInformation, orderId}) => {
                 <div className="content-congrats">
                     <h1 data-text="Felicitaciones!">Felicitaciones!</h1>
                     <h4 data-text="Su compra ha sido procesada.">Su compra ha sido procesada</h4>
-                    <p>{clientInformation.name} {clientInformation.surname}, en breve recibira en su correo {clientInformation.email} un mail</p>
-                    <p>con el detalle de su pedido e informandole los siguientes pasos para retirar su compra.</p>
+                    <p>{clientInformation.name} {clientInformation.surname}, en breve recibira en su correo {clientInformation.email}</p>
+                    <p>un mail con el detalle de su pedido e informandole los siguientes pasos para recibir su compra.</p>
                     <p>Le recordamos que su numero de seguimiento es {orderId}</p>
                     <p>Muchas gracias por confiar en nosotros.</p>
                     <div className="btns">

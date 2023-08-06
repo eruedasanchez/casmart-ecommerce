@@ -1,9 +1,8 @@
 import './ItemCount.css';
-import {Link} from 'react-router-dom';
 import minusIcon from './icon-minus.svg';
 import plusIcon from './icon-plus.svg';
 
-const ItemCount = ({count, handleDecrement, handleIncrement, handleAddToCart}) => {
+const ItemCount = ({count, handleDecrement, handleIncrement, handleAddToCart, handleAddToWishlist}) => {
     return (
         <div className="details__action">
             <div className="input__count">
@@ -12,7 +11,7 @@ const ItemCount = ({count, handleDecrement, handleIncrement, handleAddToCart}) =
                 <button onClick={handleIncrement}><img className="input__count-plus" src={plusIcon} alt="plus"/></button>
             </div>
             <button className="btn--add btn--sm" onClick={handleAddToCart}>Agregar al Carrrito</button>
-            <Link className="details__action-btn"><ion-icon name="heart-outline"></ion-icon></Link>
+            <button className="details__action-btn" onClick={handleAddToWishlist}><ion-icon name="heart-outline"></ion-icon></button>
         </div>
     )
 }

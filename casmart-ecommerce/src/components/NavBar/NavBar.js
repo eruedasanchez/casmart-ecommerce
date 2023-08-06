@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react';
 import {Link, NavLink} from 'react-router-dom';
 import logo from './logo-casmart.svg';
 import CartWidget from '../CartWidget/CartWidget';
-import LikeWidget from '../LikeWidget/LikeWidget';
+import WishlistWidget from '../WishlistWidget/WishlistWidget';
 import HeaderActionIcons from '../HeaderActionIcons/HeaderActionIcons';
 
 function NavBar() {
@@ -28,22 +28,22 @@ function NavBar() {
     return (
         <header className={activeNavbar ? "header active" : "header"}>  
             <div className="container">
-                <div onClick={handleHamburgerMenu} className={hamburgerMenu ? "overlay active" : "overlay"}></div> 
-                <div className="header-search">
-                    <input type="search" name="search" placeholder="Search product..." className="input-field"/>
-                    <button className="search-btn" aria-label="Search">
-                        <ion-icon name="search-outline"></ion-icon>
-                    </button>
-                </div>
-                <Link to='/' className="logo">
-                    <img src={logo} alt="Casmart logo" style={{width:"130", height:"31"}}/>
-                </Link>
-                <div className="header-actions">
-                    <HeaderActionIcons name="person-outline" title="Sign in"/>
-                    <HeaderActionIcons name="search-outline" title="Search"/>
-                    <CartWidget/>
-                    <LikeWidget/>
-                </div>
+                <div onClick={handleHamburgerMenu} className={hamburgerMenu ? "overlay active" : "overlay"}></div>
+                    <div className="header-search">
+                        <input type="search" name="search" placeholder="Buscar producto..." className="input-field"/>
+                        <button className="search-btn" aria-label="Search">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </button>
+                    </div> 
+                    <Link to='/' className="logo">
+                        <img src={logo} alt="Casmart logo" style={{width:"130", height:"31"}}/>
+                    </Link>
+                    <div className="header-actions">
+                        <HeaderActionIcons name="person-outline" title="Sign in"/>
+                        <HeaderActionIcons name="search-outline" title="Search"/>
+                        <CartWidget/>
+                        <WishlistWidget/>
+                    </div>
                 <button onClick={handleHamburgerMenu} className="nav-open-btn" aria-label="Open menu">
                     <span></span>
                     <span></span>
