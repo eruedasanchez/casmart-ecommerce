@@ -1,7 +1,7 @@
 import './WishlistWidget.css';
 import {useContext} from "react";
-import { Link } from "react-router-dom";
-import { CartContext } from "../../context/cartContext";
+import {Link} from "react-router-dom";
+import {CartContext} from "../../context/cartContext";
 
 const WishlistWidget = () => {
     const {productsInWishlist} = useContext(CartContext);

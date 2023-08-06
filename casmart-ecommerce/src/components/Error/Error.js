@@ -11,12 +11,8 @@ const Error = () => {
                     <h4 data-text="Opps! Page not found">Opps! Page not found</h4>
                     <p>Lo sentimos, la página que estás buscando no existe. Si crees que algo está roto, reportanos un problema</p>
                     <div className="btns">
-                        <Link to='/'>
-                            <button>Volver al Home</button>
-                        </Link>
-                        <Link to='/'>
-                            <button>Reportar problema</button>
-                        </Link>
+                        <Link to='/'><button>Volver al Home</button></Link>
+                        <Link to='/'><button>Reportar problema</button></Link>
                     </div>
                 </div>
             </div>

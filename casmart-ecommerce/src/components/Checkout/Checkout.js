@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/cartContext";
 import "./Checkout.css";
-import { addDoc, collection, getFirestore } from "firebase/firestore";
+import { addDoc, collection, doc, getFirestore, updateDoc } from "firebase/firestore";
 import Form from "../Form/Form";
 import Brief from "../Brief/Brief";
 import NavBar from "../NavBar/NavBar";
@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import Congrats from "../Congrats/Congrats";
 
 const Checkout = () => {
-    const {cart, total, subtotal, shipping, cleanCart} = useContext(CartContext);
+    const {cart, total, subtotal, shipping, cleanCart, wishlist} = useContext(CartContext);
 
     const [orderId, setOrderId] = useState("");
 
@@ -85,6 +85,33 @@ const Checkout = () => {
         return isError ? errors : null;
     }
 
+    const generateOrder = async (data) => {
+        const querydb = getFirestore();
+        const queryCollection = collection(querydb, 'orders');
+        const order = await addDoc(queryCollection, data);
+        setOrderId(order.id);
+        cleanCart();
+    }
+
+    const updateStockProducts = (cart) => {
+        const querydb = getFirestore();
+        cart.forEach(prod => {
+            const itemDoc = doc(querydb, "products", prod.id)
+            const newStock = prod.stock - prod.count;
+            updateDoc(itemDoc, {stock: newStock});
+        });
+    }
+
+    const checkStock = (cart, wishlist) => {
+        cart.forEach(prod => {
+            const wasLikedAddedProduct = wishlist.find((p) => p.id === prod.id);
+            
+            if(wasLikedAddedProduct){
+                wasLikedAddedProduct.stock -= prod.count;
+            }
+        })
+    }
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         const day = new Date();
@@ -95,19 +122,13 @@ const Checkout = () => {
 
         if(err === null){
             generateOrder(data);
+            updateStockProducts(cart);
+            checkStock(cart, wishlist);
         } else {
             setErrors(err);
         }
     }
-
-    const generateOrder = async (data) => {
-        const querydb = getFirestore();
-        const queryCollection = collection(querydb, 'orders');
-        const order = await addDoc(queryCollection, data);
-        setOrderId(order.id);
-        cleanCart();
-    }
-
+    
     const handleClientInformation = (e) => {
         setClientInformation({...clientInformation, [e.target.name]:e.target.value});
     }
@@ -120,26 +141,26 @@ const Checkout = () => {
     
     return (
         <>
-        <NavBar/>
-            {
-                cart.length > 0 ?
-                    <section className="checkout section--lg container--checkout">
-                        <div className="checkout__container grid">
-                            <Form clientInformation={clientInformation} errors={errors} handleSubmit={handleSubmit} handleClientInformation={handleClientInformation}/>
-                            <Brief cart={cart} subtotal={subtotal} shipping={shipping} total={total}/>
+            <NavBar/>
+                {
+                    cart.length > 0 ?
+                        <section className="checkout section--lg container--checkout">
+                            <div className="checkout__container grid">
+                                <Form clientInformation={clientInformation} errors={errors} handleSubmit={handleSubmit} handleClientInformation={handleClientInformation}/>
+                                <Brief cart={cart} subtotal={subtotal} shipping={shipping} total={total}/>
+                            </div>
+                        </section>
+                    :
+                    <>
+                        <h3 className="section__title-checkout">El carrito esta vacio!</h3>
+                        <div className="cart__actions padding">
+                            <Link to='/category/'>
+                                <button className="btn btn-primary flex btn--md"><ion-icon name="bag-handle-outline"></ion-icon>Continuar comprando</button>
+                            </Link>
                         </div>
-                    </section>
-                :
-                <>
-                <h3 className="section__title-checkout">El carrito esta vacio!</h3>
-                <div className="cart__actions padding">
-                    <Link to='/category/'>
-                        <button className="btn btn-primary flex btn--md"><ion-icon name="bag-handle-outline"></ion-icon>Continuar comprando</button>
-                    </Link>
-                </div>
-                </>
-            }
-        <Footer/>
+                    </>
+                }
+            <Footer/>
         </>
     )
 }

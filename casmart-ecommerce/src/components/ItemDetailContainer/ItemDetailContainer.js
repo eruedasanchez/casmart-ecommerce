@@ -1,8 +1,8 @@
+import './ItemDetailContainer.css';
 import {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
-import ItemDetail from '../ItemDetail/ItemDetail';
-import './ItemDetailContainer.css';
 import {doc, getDoc, getFirestore} from 'firebase/firestore';
+import ItemDetail from '../ItemDetail/ItemDetail';
 import Spinner from '../Spinner/Spinner';
 import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
@@ -23,11 +23,11 @@ const ItemDetailContainer = () => {
     
     return (
         <>
-        <NavBar/>
-        <div className='contaner-item'>
-            {item ? <ItemDetail item={item}/> : <Spinner/>}
-        </div>
-        <Footer/>
+            <NavBar/>
+            <div className='contaner-item'>
+                {item ? <ItemDetail item={item}/> : <Spinner/>}
+            </div>
+            <Footer/>
         </>
     )
 }

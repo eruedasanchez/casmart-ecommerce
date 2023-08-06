@@ -9,9 +9,9 @@ import NavBar from '../NavBar/NavBar';
 export const Home = () => {
     return(
         <>
-        <NavBar/>
-        <Banner title="We are on sale" subtitle="High Moda Fashion House" button="Conocer mas!"/>
-        <section className="section product">
+            <NavBar/>
+            <Banner title="We are on sale" subtitle="High Moda Fashion House" button="Conocer mas!"/>
+            <section className="section product">
                 <div className="container">
                     <h2 className="h2 section-title">Lo ultimo en moda</h2>
                     <ul className="filter-list">
@@ -22,9 +22,9 @@ export const Home = () => {
                     </ul>
                     <ItemListContainer/>
                 </div>
-        </section>
-        <Newsletter/>
-        <Footer/>
+            </section>
+            <Newsletter/>
+            <Footer/>
         </>
     )
 }

@@ -1,8 +1,9 @@
-import { useContext } from "react";
-import { CartContext } from "../../context/cartContext";
+import {useContext} from "react";
+import {CartContext} from "../../context/cartContext";
+import {Link} from "react-router-dom";
 import Footer from "../Footer/Footer"
 import NavBar from "../NavBar/NavBar"
-import { Link } from "react-router-dom";
+
 
 const Wishlist = () => {
     const {wishlist, deleteItemFromWishlist} = useContext(CartContext);
@@ -31,8 +32,8 @@ const Wishlist = () => {
                                             <td><img className="table__img" src={prod.img} alt={prod.name}/></td>
                                             <td><h3 className="table__title">{prod.name}</h3></td>
                                             <td><span className="table__price">${prod.price}</span></td>
-                                            <td><span className="table__stock">In Stock</span></td>
-                                            <td><Link to={`/item/${prod.id}`} className="btn btn btn--sm">Ver detalles</Link></td>
+                                            <td><span className="table__stock">{prod.stock > 0 ? <p>Con stock</p> : <p>Agotado</p>}</span></td>
+                                            <td><Link to={`/item/${prod.id}`} className="btn btn-primary">Ver detalles</Link></td>
                                             <td><button onClick={() => {deleteItemFromWishlist(prod.id)}}><ion-icon name="trash-outline"></ion-icon></button></td>
                                         </tr>
                                     </tbody>
@@ -41,12 +42,12 @@ const Wishlist = () => {
                         </table>
                     </div> :
                     <>
-                    <h3 className="section__title">Tu Wishlist esta vacia!</h3>
-                    <div className="cart__actions">
-                        <Link to='/category/'>
-                            <button className="btn btn-primary flex btn--md"><ion-icon name="bag-handle-outline"></ion-icon>Continuar comprando</button>
-                        </Link>
-                    </div>
+                        <h3 className="section__title">Tu Wishlist esta vacia!</h3>
+                        <div className="cart__actions">
+                            <Link to='/category/'>
+                                <button className="btn btn-primary flex btn--md"><ion-icon name="bag-handle-outline"></ion-icon>Continuar comprando</button>
+                            </Link>
+                        </div>
                     </>
                 }
             </section>

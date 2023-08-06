@@ -10,7 +10,7 @@ const ItemCount = ({count, handleDecrement, handleIncrement, handleAddToCart, ha
                 <p className="input__count-number">{count}</p>
                 <button onClick={handleIncrement}><img className="input__count-plus" src={plusIcon} alt="plus"/></button>
             </div>
-            <button className="btn--add btn--sm" onClick={handleAddToCart}>Agregar al Carrrito</button>
+            <button className="btn--add btn-primary btn--sm" onClick={handleAddToCart}>Agregar al Carrrito</button>
             <button className="details__action-btn" onClick={handleAddToWishlist}><ion-icon name="heart-outline"></ion-icon></button>
         </div>
     )

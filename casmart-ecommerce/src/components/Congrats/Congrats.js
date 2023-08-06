@@ -13,12 +13,8 @@ const Congrats = ({clientInformation, orderId}) => {
                     <p>Le recordamos que su numero de seguimiento es {orderId}</p>
                     <p>Muchas gracias por confiar en nosotros.</p>
                     <div className="btns">
-                        <Link to='/'>
-                            <button>Volver al Home</button>
-                        </Link>
-                        <Link to='/category'>
-                            <button>Continuar comprando</button>
-                        </Link>
+                        <Link to='/'><button>Volver al Home</button></Link>
+                        <Link to='/category'><button>Continuar comprando</button></Link>
                     </div>
                 </div>
             </div>

@@ -56,7 +56,7 @@ const Brief = ({cart, subtotal, shipping, total}) => {
                             </div>
                         </div>
                     </>
-                    }
+                }
         </div>
     )
 }
