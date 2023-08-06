@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+<div align="center">
+  
+  ![GitHub repo size](https://img.shields.io/github/repo-size/eruedasanchez/casmart-ecommerce)
+  ![GitHub stars](https://img.shields.io/github/stars/eruedasanchez/casmart-ecommerce?style=social)
+  ![GitHub forks](https://img.shields.io/github/forks/eruedasanchez/casmart-ecommerce?style=social)
+  [![Twitter Follow](https://img.shields.io/twitter/follow/RSanchez_Eze?style=social)](https://twitter.com/intent/follow?screen_name=RSanchez_Eze)
+  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <br />
+  <br />
 
-## Available Scripts
+  <h2 align="center">Casmart - High moda e-commerce Website</h2>
 
-In the project directory, you can run:
+  Casmart is a full responsive high moda e-commerce website. <br/>Responsive for all devices. Build using React Js.
 
-### `npm start`
+  <a href="#"><strong>➥ Live Demo</strong></a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+</div>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br />
 
-### `npm test`
+### Demo Screenshots
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Woodex Desktop Demo](https://i.postimg.cc/Mpng5zc0/readme-01.jpg "Desktop Demo")
+![Woodex Desktop Demo](https://i.postimg.cc/htN63Nxk/readme-02.jpg "Desktop Demo")
 
-### `npm run build`
+### Technologies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* [React Js](): Version 18.2.0
+* [HTML](): Version 5 
+* [CSS](): Version 3
+* [Node Js](): Version 18.16.1
+* [Ion Icons](): Version 5.2.3
+* [GIT](): Version 2.40
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Before you begin, ensure you have met the following requirements:
 
-### `npm run eject`
+* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+* [Node Js](https://nodejs.org/es/download "Download Node Js") must be installed on your operating system.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Run Locally
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run **Casmart** locally, run this command on your git bash:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Linux and macOS:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+$ sudo git clone https://github.com/eruedasanchez/casmart-ecommerce.git
+$ cd casmart-ecommerce
+$ npm start
+```
 
-## Learn More
+Windows:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+$ sudo git clone https://github.com/eruedasanchez/casmart-ecommerce.git
+$ cd casmart-ecommerce
+$ npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Contact
 
-### Code Splitting
+If you want to contact with me you can reach me at [LinkedIn](https://www.linkedin.com/in/e-ruedasanchez/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### License
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is **free to use** and does not contains any license.

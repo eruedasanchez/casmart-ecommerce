@@ -11,7 +11,7 @@
 
   <h2 align="center">Casmart - High moda e-commerce Website</h2>
 
-  Create a full responsive personal blog website. <br/>Responsive for all devices, build using React Js.
+  Casmart is a full responsive high moda e-commerce website. <br/>Responsive for all devices. Build using React Js.
 
   <a href="#"><strong>➥ Live Demo</strong></a>
 
@@ -38,21 +38,26 @@
 Before you begin, ensure you have met the following requirements:
 
 * [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+* [Node Js](https://nodejs.org/es/download "Download Node Js") must be installed on your operating system.
 
 ### Run Locally
 
-To run **Dooxew** locally, run this command on your git bash:
+To run **Casmart** locally, run this command on your git bash:
 
 Linux and macOS:
 
 ```bash
-sudo git clone https://github.com/eruedasanchez/casmart-ecommerce.git
+$ sudo git clone https://github.com/eruedasanchez/casmart-ecommerce.git
+$ cd casmart-ecommerce
+$ npm start
 ```
 
 Windows:
 
 ```bash
-git clone https://github.com/eruedasanchez/casmart-ecommerce.git
+$ sudo git clone https://github.com/eruedasanchez/casmart-ecommerce.git
+$ cd casmart-ecommerce
+$ npm start
 ```
 
 ### Contact
