@@ -21,8 +21,12 @@
 
 ### Demo Screenshots
 
-![Woodex Desktop Demo](https://i.postimg.cc/Mpng5zc0/readme-01.jpg "Desktop Demo")
-![Woodex Desktop Demo](https://i.postimg.cc/htN63Nxk/readme-02.jpg "Desktop Demo")
+![Casmart Desktop Demo](https://i.postimg.cc/Mpng5zc0/readme-01.jpg "Casmart Demo")
+![Casmart Desktop Demo](https://i.postimg.cc/htN63Nxk/readme-02.jpg "Casmart Demo")
+![Casmart Desktop Demo](https://i.postimg.cc/hGjNjXm2/readme-item.jpg "Casmart Demo")
+![Casmart Desktop Demo](https://i.postimg.cc/tgMwV9tp/readme-cart.jpg "Casmart Demo")
+![Casmart Desktop Demo](https://i.postimg.cc/RFJ872Xf/readme-checkout.jpg "Casmart Demo")
+![Casmart Desktop Demo](https://i.postimg.cc/RZGj47W3/readme-congrats.jpg "Casmart Demo")
 
 ### Technologies
 
