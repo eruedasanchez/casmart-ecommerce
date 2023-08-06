@@ -211,3 +211,77 @@ table{
 .cart__total .btn{
     display: inline-flex;
 }
+
+
+@media (max-width:992px){
+    .container--cart{
+        max-width: 740px;
+    }
+
+    .cart__group{
+        grid-template-columns: 1fr;
+        row-gap: 2.75rem;
+    }
+
+    .btn{
+        height: 45px;
+        line-height: 45px;
+    }
+
+    .btn--md{
+        height: 42px;
+        line-height: 39px;
+    }
+
+    .btn--sm{
+        height: 38px;
+        line-height: 35px;
+    }
+
+    .table thead tr th:nth-child(1), .table tbody tr td:nth-child(1){
+        width: 140px;
+    }
+        
+    .table thead tr th:nth-child(2), .table tbody tr td:nth-child(2){
+        width: 330px;
+    }
+
+    .table__title{
+        font-size: 0.8rem;
+    }
+        
+    .table thead tr th:nth-child(3), .table tbody tr td:nth-child(3){
+        width: 80px;
+    }
+        
+    .table thead tr th:nth-child(4), .table tbody tr td:nth-child(4){
+        width: 160px;
+    }
+        
+    .table thead tr th:nth-child(5), .table tbody tr td:nth-child(5){
+        width: 160px;
+    }
+        
+    .table thead tr th:nth-child(6), .table tbody tr td:nth-child(6){
+        width: 100px;
+    }
+}
+
+@media (max-width:768px){
+    .container--cart{
+        max-width: 540px;
+    }
+}
+
+@media (max-width:576px){
+    .cart__total{
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 350px){
+    .cart__btn{
+        bottom: 1.4rem;
+        right: 1.25rem;
+    }
+}

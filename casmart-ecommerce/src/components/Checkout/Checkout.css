@@ -54,3 +54,67 @@ table{
     padding-right: 6rem;
 }
 
+@media (max-width: 1200px){
+    .container--checkout{
+        max-width: 960px;
+    }
+
+    .checkout__group:nth-child(2){
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width:992px){
+    .container--checkout{
+        max-width: 740px;
+    }
+
+    .checkout__container{
+        grid-template-columns: 1fr;
+    }
+
+    .btn{
+        height: 45px;
+        line-height: 45px;
+    }
+
+    .btn--md{
+        height: 42px;
+        line-height: 39px;
+    }
+
+    .btn--sm{
+        height: 38px;
+        line-height: 35px;
+    }
+
+    .table thead tr th:nth-child(1), .table tbody tr td:nth-child(1){
+        width: 140px;
+    }
+        
+    .table thead tr th:nth-child(2), .table tbody tr td:nth-child(2){
+        width: 330px;
+    }
+        
+    .table tbody tr td:nth-child(3){
+        width: 80px;
+    }
+}
+
+@media (max-width:768px){
+    .container--checkout{
+        max-width: 540px;
+    }
+}
+
+@media (max-width:576px){
+    .checkout__group:nth-child(2){
+        padding: 1.25rem;
+    }
+    
+    .payment__methods{
+        margin-block: 2.25rem 2.5rem;
+    }
+}
+
+

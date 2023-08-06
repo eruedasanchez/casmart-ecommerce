@@ -20,7 +20,7 @@ const Form = ({clientInformation, errors, handleSubmit, handleClientInformation}
                 <input type="email" placeholder="Confirmar Email" value={clientInformation.email} onChange={handleClientInformation} name="email" className="form__input"/>
                 {errors.email && <p className='alert'>{errors.email}</p>}
                 <h3 className="checkout__title">Informacion adicional</h3>
-                <textarea placeholder="Escriba aqui su comentario (300 caracteres)" cols="30" rows="10" value={clientInformation.comment} onChange={handleClientInformation} name="comment" className="form__input textarea"></textarea>
+                <textarea placeholder="Escriba aqui su comentario (Maximo de 300 caracteres)" cols="30" rows="10" value={clientInformation.comment} onChange={handleClientInformation} name="comment" className="form__input textarea"></textarea>
                 {errors.comment && <p className='alert'>{errors.comment}</p>}
                 <button type="submit" className="btn--add btn--md w-comfirm">Realizar pedido</button>
             </form>
