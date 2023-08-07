@@ -13,7 +13,7 @@
 
   Casmart is a full responsive high moda e-commerce website. <br/>Responsive for all devices. Build using React Js.
 
-  <a href="https://casmart-moda-ecommerce.vercel.app/"><strong>➥ Live Demo</strong></a>
+  <a href="https://casmart-moda-ecommerce.vercel.app/" target="_blank"><strong>➥ Live Demo</strong></a>
 
 </div>
 
